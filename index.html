@@ -251,6 +251,37 @@
             display: none;
         }
 
+        /* Flagship Badge */
+        .flagship-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+            border: 2px solid #FFD700;
+            animation: flagship-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes flagship-glow {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 16px rgba(255, 215, 0, 0.6);
+            }
+        }
+
+        .project-card.flagship {
+            border-left: 4px solid #FFD700;
+            background: linear-gradient(to right, #fffef7, #ffffff);
+        }
+
         /* Responsive */
         @media (max-width: 968px) {
             .container {
@@ -309,7 +340,8 @@
                 excerpt: 'Delivered 2 Tier 4 and 5 Tier 3 data centers for banking and corporate clients. Managed teams of 20-35 resources. Achieved Uptime Institute Tier 4 certification (elite 2-3% globally). 100% banking regulatory compliance with Central Bank UAE. Zero critical safety incidents across 100,000+ man-hours. EVM: CPI 1.02-1.05, SPI 0.98-1.02.',
                 technologies: ['Data Center & Infrastructure'],
                 industries: ['Banking & Financial Services', 'Government & Public Sector'],
-                tags: ['PMP Certified', 'EVM (CPI 1.02-1.05)', 'Banking Compliance', 'Central Bank Audits', 'Uptime Tier 4', 'MS Project', 'AutoCAD']
+                tags: ['PMP Certified', 'EVM (CPI 1.02-1.05)', 'Banking Compliance', 'Central Bank Audits', 'Uptime Tier 4', 'MS Project', 'AutoCAD'],
+                flagship: true
             },
             {
                 id: 'ikea',
@@ -318,7 +350,8 @@
                 excerpt: 'Led $3.8M integrated technology program managing 6 concurrent sub-projects (CCTV 500+ cameras, control room 3x6 Matrox video wall, VMS with Milestone XProtect & Axxon, POS integration, Qmatic CEM, digital signage). Coordinated 30+ team members, 8 vendor partners. Delivered on-time, under budget (CPI 1.04). Reduced shrinkage by 35%.',
                 technologies: ['ELV & Building Systems', 'Network & Security'],
                 industries: ['Retail & Commercial'],
-                tags: ['IKEA Global Standards', 'SIRA Compliant', 'Hybrid Methodology', 'EVM (CPI 1.04)', 'Axxon VMS', 'Matrox', '8 operators']
+                tags: ['IKEA Global Standards', 'SIRA Compliant', 'Hybrid Methodology', 'EVM (CPI 1.04)', 'Axxon VMS', 'Matrox', '8 operators'],
+                flagship: true
             },
             {
                 id: 'hct',
@@ -327,7 +360,8 @@
                 excerpt: 'Transformed 200+ smart classrooms across 18 HCT campuses. Coordinated 25-30 resources across 18 locations. Standardized technology platform (Crestron/Extron control, interactive whiteboards, video conferencing, digital signage). Enabled distance learning connecting 18 campuses. Program CPI 1.06, 40% reduction in support complexity.',
                 technologies: ['ELV & Building Systems', 'Network & Security'],
                 industries: ['Education'],
-                tags: ['Program Management', 'EVM (CPI 1.06)', 'Gov Procurement', '200+ Classrooms', '4-Year Program', 'MoE Standards']
+                tags: ['Program Management', 'EVM (CPI 1.06)', 'Gov Procurement', '200+ Classrooms', '4-Year Program', 'MoE Standards'],
+                flagship: true
             },
             {
                 id: 'mobile-attendance',
@@ -336,7 +370,8 @@
                 excerpt: 'Deployed GPS mobile attendance solution for 15,000+ workers across construction sites, Jashanmal 250+ retail locations, Burberry luxury retail, and healthcare facilities. 29+ devices including ruggedized tablets on employee buses. Custom middleware, API development, database integration (Zoho, Odoo, Dynamics, Oracle). Microsoft Intune MDM, APK deployment. Eliminated buddy punching saving $400K+ annually.',
                 technologies: ['Mobile & Workforce Management', 'Enterprise Applications', 'Cloud & Migration'],
                 industries: ['Manufacturing & Industrial', 'Retail & Commercial', 'Healthcare'],
-                tags: ['Agile', 'Private Cloud (ISP)', 'Microsoft Intune', 'APK Deployment', '29+ Devices', '15,000+ Workers']
+                tags: ['Agile', 'Private Cloud (ISP)', 'Microsoft Intune', 'APK Deployment', '29+ Devices', '15,000+ Workers'],
+                flagship: true
             },
             {
                 id: 'virgin-money',
@@ -345,7 +380,8 @@
                 excerpt: 'Implemented 15+ RPA bots for Virgin Money Australia (6-month final implementation and handover). BOT types: Document Processing (5,000+ docs/month, 85% time reduction), Account Reconciliation (3,000+ accounts daily, 95% accuracy), Customer Onboarding (200+ apps/day, 70% time reduction), Reporting & Analytics (100% on-time delivery), Exception Handling (1,000+ weekly, 60% faster). APRA compliant. ROI within 8 months.',
                 technologies: ['RPA & Automation', 'Enterprise Applications'],
                 industries: ['Banking & Financial Services'],
-                tags: ['UiPath RPA', 'Financial Services', 'APRA Compliant', 'Audit Support', '6 Months', '5 BOT Types']
+                tags: ['UiPath RPA', 'Financial Services', 'APRA Compliant', 'Audit Support', '6 Months', '5 BOT Types'],
+                flagship: true
             },
             {
                 id: 'virtualization',
@@ -381,7 +417,8 @@
                 excerpt: 'Central Bank UAE infrastructure project with ManageEngine suite implementation. Privileged Access Management (PAM), SIEM & Audit Logging, Patch Management & Vulnerability Control. Supported 2 Central Bank internal audits providing comprehensive documentation, compliance evidence, access logs within 24-48 hours. Zero findings. Met Central Bank UAE IT security policies, change management procedures, access control requirements.',
                 technologies: ['Network & Security', 'Enterprise Applications'],
                 industries: ['Banking & Financial Services', 'Government & Public Sector'],
-                tags: ['Central Bank', 'ManageEngine', 'PAM/SIEM', 'Banking Compliance', 'Audit Support', 'Third-Party Risk', 'PMP']
+                tags: ['Central Bank', 'ManageEngine', 'PAM/SIEM', 'Banking Compliance', 'Audit Support', 'Third-Party Risk', 'PMP'],
+                flagship: true
             },
             {
                 id: 'healthcare',
@@ -390,7 +427,8 @@
                 excerpt: 'Healthcare IT infrastructure across 3 major institutions. Network segmentation for HIPAA-aligned data protection (medical devices, clinical systems, administrative networks). Medical Device Network Security with FDA-recommended controls. Access controls for clinical systems, audit logging for PHI access, encryption. Supported UAE Health Authority inspections, Civil Defense inspections. Zero critical system failures during patient operations. 24/7 uptime for clinical systems.',
                 technologies: ['Data Center & Infrastructure', 'Network & Security'],
                 industries: ['Healthcare'],
-                tags: ['Healthcare IT', 'HIPAA-Aligned', 'Medical Device Security', '24/7 Uptime', 'Audit Support', 'PMP']
+                tags: ['Healthcare IT', 'HIPAA-Aligned', 'Medical Device Security', '24/7 Uptime', 'Audit Support', 'PMP'],
+                flagship: true
             },
             {
                 id: 'hr-workforce',
@@ -399,7 +437,8 @@
                 excerpt: 'Enterprise HR applications for 9 organizations (Al Habbai Contracting, 3 contracting companies, 5 manufacturing companies). Agile methodology (2-week sprints). Vendor SDKs from 10+ time & attendance manufacturers (ZKTeco, Suprema, Anviz, eSSL). Microsoft Azure cloud platform. Data protection controls (encryption at rest/in transit, role-based access, audit logging). UAE Labor Law compliance. Eliminated manual attendance reconciliation saving 200+ hours/month per client. 95%+ accuracy.',
                 technologies: ['Enterprise Applications', 'Cloud & Migration', 'Mobile & Workforce Management'],
                 industries: ['Manufacturing & Industrial', 'Corporate Enterprise'],
-                tags: ['Agile (2-week sprints)', 'Microsoft Azure', 'Data Protection', 'Third-Party Risk', '9 Organizations']
+                tags: ['Agile (2-week sprints)', 'Microsoft Azure', 'Data Protection', 'Third-Party Risk', '9 Organizations'],
+                flagship: true
             },
             {
                 id: 'insead',
@@ -521,8 +560,8 @@
         function showAllProjects() {
             document.getElementById('sidebar').classList.add('hidden');
             
-            let html = '<h2>All Projects (17 Major Programs)</h2>';
-            html += '<p style="color: #64748b; margin-bottom: 2rem;">Complete portfolio of enterprise technology programs delivered across 7 industries</p>';
+            let html = '<h2>All Projects (18 Major Programs • 8 Flagship)</h2>';
+            html += '<p style="color: #64748b; margin-bottom: 2rem;">Complete portfolio of enterprise technology programs delivered across 7 industries. Flagship projects represent the most comprehensive, multi-year programs with detailed documentation.</p>';
             
             // Stats grid
             html += '<div class="stats-grid">';
@@ -660,9 +699,15 @@
 
         // Create project card HTML
         function createProjectCard(project) {
+            const flagshipClass = project.flagship ? ' flagship' : '';
+            const flagshipBadge = project.flagship ? '<span class="flagship-badge">🏆 FLAGSHIP</span>' : '';
+            
             return `
-                <div class="project-card">
-                    <div class="project-title">${project.title}</div>
+                <div class="project-card${flagshipClass}">
+                    <div class="project-title">
+                        ${project.title}
+                        ${flagshipBadge}
+                    </div>
                     <div class="project-subtitle">${project.subtitle}</div>
                     <div class="project-excerpt">${project.excerpt}</div>
                     <div class="project-tags">
