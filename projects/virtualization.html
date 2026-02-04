@@ -4,28 +4,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Server Virtualization & Consolidation | KM Basha Portfolio</title>
+    <title>Server Virtualization & Infrastructure Consolidation | KM Basha Portfolio</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 2rem; text-align: center; }
-        .container { max-width: 800px; margin: 4rem auto; padding: 2rem; background: white; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; }
-        h1 { font-size: 2rem; margin-bottom: 1rem; }
-        p { font-size: 1.1rem; color: #64748b; margin-bottom: 2rem; }
-        .back-btn { display: inline-block; background: #3b82f6; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: 600; }
-        .back-btn:hover { background: #1e3a8a; }
+        header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .header-content { max-width: 1200px; margin: 0 auto; }
+        .back-link { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; font-size: 0.95rem; opacity: 0.9; }
+        .back-link:hover { opacity: 1; }
+        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+        .subtitle { font-size: 1.2rem; opacity: 0.95; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+        .content-card { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
+        .tag { background: #dbeafe; color: #1e40af; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
+        .project-content { color: #374151; }
+        .project-content h2 { color: #1e3a8a; font-size: 1.6rem; margin: 2rem 0 1rem 0; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
+        .project-content h3 { color: #1e3a8a; font-size: 1.3rem; margin: 1.5rem 0 0.75rem 0; }
+        .project-content strong { color: #1e3a8a; font-weight: 600; }
+        .project-content ul { margin-left: 2rem; margin-top: 0.5rem; }
+        .project-content li { margin: 0.5rem 0; }
     </style>
 </head>
 <body>
     <header>
-        <h1>Server Virtualization & Consolidation</h1>
-        <p style="opacity: 0.9;">20+ P2V Projects</p>
+        <div class="header-content">
+            <a href="../index.html" class="back-link">← Back to Portfolio</a>
+            <h1>Server Virtualization & Infrastructure Consolidation</h1>
+            <div class="subtitle">20+ P2V Projects - VMware vSphere & Microsoft Hyper-V</div>
+        </div>
     </header>
     <div class="container">
-        <h1>🚧 Page Under Construction</h1>
-        <p>Detailed content for this project will be added soon.</p>
-        <p>Please check back later or return to the main portfolio.</p>
-        <a href="../index.html" class="back-btn">← Back to Portfolio</a>
+        <div class="content-card">
+            <div class="tags"><span class="tag">VMware vSphere</span> <span class="tag">MS Hyper-V</span> <span class="tag">Brocade</span> <span class="tag">Storage HA</span> <span class="tag">P2V</span> <span class="tag">Desktop Virtualization</span> <span class="tag">Hybrid Cloud</span> <span class="tag">Azure</span></div>
+            <div class="project-content">
+<h2>Project Overview</h2>
+<p>Physical-to-Virtual migrations (5-30 servers per project) across 20+ enterprise clients in banking, manufacturing, healthcare, education, and corporate sectors. Budget range: $80K-$350K per project.</p>
+
+<h2>Project Scope & Types</h2>
+<ul>
+<li><strong>Physical to Virtual (P2V) migrations:</strong> 5-30 physical servers per project</li>
+<li>Local datacenter virtualization and consolidation</li>
+<li>Hybrid cloud migrations (on-premises + Microsoft Azure)</li>
+<li>Desktop virtualization using VMware Horizon with thin/zero clients</li>
+<li>High-availability and disaster recovery configurations</li>
+</ul>
+
+<h2>Technical Implementation</h2>
+
+<h3>Virtualization Platforms</h3>
+<ul>
+<li><strong>VMware vSphere (ESXi, vCenter):</strong> Primary platform for 70% of projects</li>
+<li><strong>Microsoft Hyper-V:</strong> Windows-centric environments and Azure integration</li>
+<li>Storage virtualization and IP LUN mapping for DAS-based storage expansion</li>
+</ul>
+
+<h3>Storage Infrastructure</h3>
+<ul>
+<li><strong>Enterprise storage:</strong> EMC VNX, HP 3PAR, Dell EqualLogic, NetApp FAS</li>
+<li><strong>Mid-range storage:</strong> Lenovo DM Series, IBM Storwize, QNAP, Infotrend</li>
+<li><strong>Storage connectivity:</strong> Brocade FC switches for SAN fabric, Dell switches for iSCSI</li>
+<li><strong>High availability:</strong> Multipath I/O, storage replication, automated failover</li>
+</ul>
+
+<h3>Desktop Virtualization</h3>
+<ul>
+<li><strong>VMware Horizon View:</strong> Virtual desktop deployment infrastructure</li>
+<li><strong>Thin clients:</strong> HP t520/t620, Dell Wyse 5070</li>
+<li><strong>Zero clients:</strong> Teradici PCoIP, Dell Wyse P25</li>
+<li>Connection brokers, persistent and non-persistent desktop pools</li>
+</ul>
+
+<h3>Cloud Integration</h3>
+<ul>
+<li><strong>Hybrid virtualization:</strong> Local VMware + Microsoft Azure</li>
+<li>Azure Active Directory integration for authentication services</li>
+<li>Azure Site Recovery for disaster recovery scenarios</li>
+<li>ExpressRoute connections for secure hybrid connectivity</li>
+</ul>
+
+<h2>Project Management Approach</h2>
+
+<h3>Stakeholder Coordination</h3>
+<ul>
+<li>Worked with multiple vendor teams: VMware/Microsoft contractors, application vendors, storage vendors</li>
+<li>Coordinated with client application teams ensuring compatibility and performance</li>
+<li>Engaged Microsoft contractors for licensing and Azure integration planning</li>
+<li>Managed third-party application contractors for compatibility testing</li>
+</ul>
+
+<h3>Implementation Methodology</h3>
+<ul>
+<li><strong>Assessment phase:</strong> Server inventory, dependency mapping, performance baselining</li>
+<li><strong>Pilot migrations:</strong> 2-3 servers to validate process and identify issues</li>
+<li><strong>Phased rollout:</strong> Migrate non-critical → business applications → mission-critical</li>
+<li><strong>Hypercare support:</strong> 24/7 monitoring during first 2 weeks post-migration</li>
+</ul>
+
+<h3>Quality & Testing</h3>
+<ul>
+<li><strong>Pre-migration:</strong> Application compatibility testing, backup verification</li>
+<li><strong>Post-migration:</strong> Performance validation, application testing, user acceptance</li>
+<li><strong>Rollback procedures:</strong> Maintained source servers for 30 days as contingency</li>
+<li><strong>Documentation:</strong> As-built diagrams, configuration guides, runbooks</li>
+</ul>
+
+<h2>Outcomes & Benefits</h2>
+<ul>
+<li><strong>Infrastructure consolidation:</strong> 60-80% reduction in physical server count</li>
+<li><strong>Cost savings:</strong> $50K-$150K annual savings per project (power, cooling, hardware maintenance)</li>
+<li><strong>Improved availability:</strong> 99.9%+ uptime with HA configurations</li>
+<li><strong>Faster provisioning:</strong> New server deployment reduced from days to hours</li>
+<li><strong>Disaster recovery:</strong> Enabled VM replication and rapid recovery capabilities</li>
+<li><strong>Energy efficiency:</strong> 70%+ reduction in datacenter power consumption</li>
+</ul>
+</div>
+        </div>
     </div>
 </body>
 </html>
