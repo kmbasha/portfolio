@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>KM Basha - ICT Infrastructure Portfolio</title>
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            margin: 0.25rem 0;
+        }
+
+        /* Navigation */
+        .nav-container {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .nav-btn {
+            padding: 0.75rem 1.5rem;
+            border: none;
+            background: #e5e7eb;
+            color: #374151;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            background: #3b82f6;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        .nav-btn.active {
+            background: #1e3a8a;
+            color: white;
+        }
+
+        /* Main Container */
+        .container {
+            display: flex;
+            max-width: 1400px;
+            margin: 2rem auto;
+            gap: 2rem;
+            padding: 0 1rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 280px;
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            height: fit-content;
+            position: sticky;
+            top: 120px;
+        }
+
+        .sidebar h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            border-bottom: 2px solid #e5e7eb;
+            padding-bottom: 0.5rem;
+        }
+
+        .filter-item {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .filter-item:hover {
+            background: #f3f4f6;
+            transform: translateX(5px);
+        }
+
+        .filter-item.active {
+            background: #dbeafe;
+            color: #1e3a8a;
+            font-weight: 600;
+        }
+
+        .count-badge {
+            background: #e5e7eb;
+            padding: 0.25rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* Main Content */
+        .main-content {
+            flex: 1;
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid #3b82f6;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            color: #64748b;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Project Cards */
+        .project-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            transition: all 0.3s ease;
+        }
+
+        .project-card:hover {
+            border-color: #3b82f6;
+            box-shadow: 0 8px 16px rgba(59, 130, 246, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .project-title {
+            color: #1e3a8a;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-subtitle {
+            color: #64748b;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-excerpt {
+            color: #475569;
+            line-height: 1.8;
+            margin: 1rem 0;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1rem 0;
+        }
+
+        .tag {
+            background: #dbeafe;
+            color: #1e40af;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .view-details-btn {
+            display: inline-block;
+            background: #3b82f6;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .view-details-btn:hover {
+            background: #1e3a8a;
+            transform: translateX(5px);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Flagship Badge */
+        .flagship-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+            box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+            border: 2px solid #FFD700;
+            animation: flagship-glow 2s ease-in-out infinite;
+        }
+
+        @keyframes flagship-glow {
+            0%, 100% {
+                box-shadow: 0 2px 8px rgba(255, 215, 0, 0.4);
+            }
+            50% {
+                box-shadow: 0 4px 16px rgba(255, 215, 0, 0.6);
+            }
+        }
+
+        .project-card.flagship {
+            border-left: 4px solid #FFD700;
+            background: linear-gradient(to right, #fffef7, #ffffff);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                position: static;
+            }
+            header h1 {
+                font-size: 1.8rem;
+            }
+            header p {
+                font-size: 0.95rem;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1>KM BASHA</h1>
+        <p>Senior ICT Program Manager | PMP #4075113 | CISA | ISACA Member #2212081</p>
+        <p>Technical Background + 28 Years PM/Program Management | Melbourne, VIC</p>
+        <p>ICT Infrastructure & Enterprise IT Programs</p>
+    </header>
+
+    <div class="nav-container">
+        <div class="nav-buttons">
+            <button class="nav-btn active" onclick="switchView('all')">All Projects</button>
+            <button class="nav-btn" onclick="switchView('technology')">By Technology</button>
+            <button class="nav-btn" onclick="switchView('industry')">By Industry</button>
+            <button class="nav-btn" onclick="window.location.href='../index_landing.html'">← Portfolio Home</button>
+            <button class="nav-btn" onclick="window.location.href='../competencies.html'">PM Competencies</button>
+            <button class="nav-btn" onclick="window.location.href='../grc.html'">GRC</button>
+            <button class="nav-btn" onclick="window.location.href='../sectors.html'">Sectors</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h3 id="filterTitle">Filter Projects</h3>
+            <div id="filterContent"></div>
+        </aside>
+
+        <main class="main-content" id="mainContent">
+            <!-- Content populated by JavaScript -->
+        </main>
+    </div>
+
+    <script>
+        // ICT Portfolio - 17 projects
+        const ict_project_ids = ["datacenter", "virtualization", "dc-relocation", "cloud-migration", "mobile-attendance", "virgin-money", "rfid-asset-tracking", "multi-brand-retail", "ags-peoplesoft", "federal-national-council", "ibm-legacy", "hr-workforce", "ikea", "hct", "mall-technology", "qmatic-cem", "healthcare"];
+        
+        // All projects data
+        const projects = [
+
+            {
+                id: 'datacenter',
+                title: 'Enterprise Data Center Tier 3 & 4 Facilities',
+                subtitle: '7 Facilities: 2 Tier 4 (99.995% uptime) + 5 Tier 3 (99.982% uptime)',
+                excerpt: 'Delivered 2 Tier 4 and 5 Tier 3 data centers for banking and corporate clients. Managed teams of 20-35 resources. Achieved Uptime Institute Tier 4 certification (elite 2-3% globally). 100% banking regulatory compliance with Central Bank UAE. Zero critical safety incidents across 100,000+ man-hours. EVM: CPI 1.02-1.05, SPI 0.98-1.02.',
+                technologies: ['Data Center & Infrastructure'],
+                industries: ['Banking & Financial Services', 'Government & Public Sector'],
+                tags: ['PMP Certified', 'EVM (CPI 1.02-1.05)', 'Banking Compliance', 'Central Bank Audits', 'Uptime Tier 4', 'MS Project', 'AutoCAD'],
+                flagship: true
+            },
+            {
+                id: 'ikea',
+                title: 'IKEA Multi-Location Integrated Technology',
+                subtitle: '3 Locations: Yas Island Abu Dhabi, Dubai Festival City, Al Ain',
+                excerpt: 'Led $3.8M integrated technology program managing 6 concurrent sub-projects (CCTV 500+ cameras, control room 3x6 Matrox video wall, VMS with Milestone XProtect & Axxon, POS integration, Qmatic CEM, digital signage). Coordinated 30+ team members, 8 vendor partners. Delivered on-time, under budget (CPI 1.04). Reduced shrinkage by 35%.',
+                technologies: ['ELV & Building Systems', 'Network & Security'],
+                industries: ['Retail & Commercial'],
+                tags: ['IKEA Global Standards', 'SIRA Compliant', 'Hybrid Methodology', 'EVM (CPI 1.04)', 'Axxon VMS', 'Matrox', '8 operators'],
+                flagship: true
+            },
+            {
+                id: 'hct',
+                title: 'Higher Colleges of Technology - 18 Campus Program',
+                subtitle: '200+ Classrooms Transformed Over 4-Year Program',
+                excerpt: 'Transformed 200+ smart classrooms across 18 HCT campuses. Coordinated 25-30 resources across 18 locations. Standardized technology platform (Crestron/Extron control, interactive whiteboards, video conferencing, digital signage). Enabled distance learning connecting 18 campuses. Program CPI 1.06, 40% reduction in support complexity.',
+                technologies: ['ELV & Building Systems', 'Network & Security'],
+                industries: ['Education'],
+                tags: ['Program Management', 'EVM (CPI 1.06)', 'Gov Procurement', '200+ Classrooms', '4-Year Program', 'MoE Standards'],
+                flagship: true
+            },
+            {
+                id: 'mobile-attendance',
+                title: 'GPS Mobile Attendance - 15,000+ Workers',
+                subtitle: 'Construction, Retail (250+ locations), Healthcare Workforce Management',
+                excerpt: 'Deployed GPS mobile attendance solution for 15,000+ workers across construction sites, Jashanmal 250+ retail locations, Burberry luxury retail, and healthcare facilities. 29+ devices including ruggedized tablets on employee buses. Custom middleware, API development, database integration (Zoho, Odoo, Dynamics, Oracle). Microsoft Intune MDM, APK deployment. Eliminated buddy punching saving $400K+ annually.',
+                technologies: ['Mobile & Workforce Management', 'Enterprise Applications', 'Cloud & Migration'],
+                industries: ['Manufacturing & Industrial', 'Retail & Commercial', 'Healthcare'],
+                tags: ['Agile', 'Private Cloud (ISP)', 'Microsoft Intune', 'APK Deployment', '29+ Devices', '15,000+ Workers'],
+                flagship: true
+            },
+            {
+                id: 'virgin-money',
+                title: 'Virgin Money Australia - UiPath RPA',
+                subtitle: '5 BOT Types Automating 5,000+ Transactions/Month',
+                excerpt: 'Implemented 15+ RPA bots for Virgin Money Australia (6-month final implementation and handover). BOT types: Document Processing (5,000+ docs/month, 85% time reduction), Account Reconciliation (3,000+ accounts daily, 95% accuracy), Customer Onboarding (200+ apps/day, 70% time reduction), Reporting & Analytics (100% on-time delivery), Exception Handling (1,000+ weekly, 60% faster). APRA compliant. ROI within 8 months.',
+                technologies: ['RPA & Automation', 'Enterprise Applications'],
+                industries: ['Banking & Financial Services'],
+                tags: ['UiPath RPA', 'Financial Services', 'APRA Compliant', 'Audit Support', '6 Months', '5 BOT Types'],
+                flagship: true
+            },
+            {
+                id: 'virtualization',
+                title: 'Server Virtualization & Consolidation',
+                subtitle: '20+ P2V Projects - VMware vSphere & Microsoft Hyper-V',
+                excerpt: 'Physical-to-Virtual migrations (5-30 servers per project) across 20+ enterprise clients. VMware vSphere 70% of projects, Microsoft Hyper-V for Windows/Azure. Storage: EMC VNX, HP 3PAR, Dell EqualLogic, NetApp FAS, Lenovo, IBM Storwize, QNAP. Brocade FC switches for SAN. Desktop virtualization with VMware Horizon. Hybrid cloud with Azure. 60-80% server reduction, $50K-$150K annual savings per project, 99.9%+ uptime.',
+                technologies: ['Data Center & Infrastructure', 'Cloud & Migration'],
+                industries: ['Banking & Financial Services', 'Manufacturing & Industrial', 'Healthcare', 'Education'],
+                tags: ['VMware vSphere', 'MS Hyper-V', 'Brocade', 'Storage HA', 'P2V', 'Desktop Virtualization', 'Hybrid Cloud', 'Azure']
+            },
+            {
+                id: 'telephony',
+                title: 'Enterprise Telephony & Unified Communications',
+                subtitle: '30+ PABX Deployments - NEC, Cisco, Avaya, 3CX, Yealink',
+                excerpt: '30+ PABX implementations across corporate, healthcare, education, manufacturing, hospitality. Platforms: NEC SV9100/SL2100, Panasonic KX-NS/TDE, Cisco CUCM (500+ users), Avaya IP Office & Aura, 3CX Cloud PBX, Yealink IP-PBX. Endpoints: Cisco 7800/8800, Yealink T4/T5, Grandstream GXP/GRP. Microsoft Teams Direct Routing, SIP trunks. CRM integration (Salesforce, Dynamics, Zoho), Hotel PMS (Opera, Fidelio). 40-60% cost reduction.',
+                technologies: ['Enterprise Telephony & UC'],
+                industries: ['Corporate Enterprise', 'Healthcare', 'Education', 'Manufacturing & Industrial', 'Hospitality & Residential'],
+                tags: ['NEC', 'Cisco CUCM', 'Avaya', '3CX Cloud', 'Yealink', 'Grandstream', 'Meeting Rooms', 'SIP Trunks', 'UC']
+            },
+            {
+                id: 'dc-relocation',
+                title: 'Data Center Relocation & Migration',
+                subtitle: 'Tawasul Tier 3 + 5 Corporate Datacenter Relocations',
+                excerpt: 'Complete Tier 3 datacenter relocation (Tawasul flagship): 50+ physical servers, enterprise storage arrays, network core equipment. Client representative coordinating all stakeholders, ISP providers (Etisalat, du, international), datacenter facilities. Components: Dell/HP servers, Cisco UCS/HP BladeSystem, EMC VNX/NetApp storage, Cisco Nexus 7000 core, Palo Alto/Cisco ASA firewalls, F5 BIG-IP. Maintained 99.9% uptime SLA, zero data loss, zero unplanned downtime.',
+                technologies: ['Data Center & Infrastructure'],
+                industries: ['Banking & Financial Services', 'Government & Public Sector', 'Corporate Enterprise'],
+                tags: ['Tier 3', 'ISP Migration', 'Storage Migration', 'Zero Downtime', 'Client Representative', 'Risk Management']
+            },
+            {
+                id: 'central-bank',
+                title: 'Central Bank UAE - Infrastructure & IT Management',
+                subtitle: 'ManageEngine Suite with PAM/SIEM for Banking Compliance',
+                excerpt: 'Central Bank UAE infrastructure project with ManageEngine suite implementation. Privileged Access Management (PAM), SIEM & Audit Logging, Patch Management & Vulnerability Control. Supported 2 Central Bank internal audits providing comprehensive documentation, compliance evidence, access logs within 24-48 hours. Zero findings. Met Central Bank UAE IT security policies, change management procedures, access control requirements.',
+                technologies: ['Network & Security', 'Enterprise Applications'],
+                industries: ['Banking & Financial Services', 'Government & Public Sector'],
+                tags: ['Central Bank', 'ManageEngine', 'PAM/SIEM', 'Banking Compliance', 'Audit Support', 'Third-Party Risk', 'PMP'],
+                flagship: true
+            },
+            {
+                id: 'healthcare',
+                title: 'Healthcare Infrastructure - 3 Major Institutions',
+                subtitle: 'Burjeel Hospital, Sheikh Khalifa Medical City, NMC Hospital',
+                excerpt: 'Healthcare IT infrastructure across 3 major institutions. Network segmentation for HIPAA-aligned data protection (medical devices, clinical systems, administrative networks). Medical Device Network Security with FDA-recommended controls. Access controls for clinical systems, audit logging for PHI access, encryption. Supported UAE Health Authority inspections, Civil Defense inspections. Zero critical system failures during patient operations. 24/7 uptime for clinical systems.',
+                technologies: ['Data Center & Infrastructure', 'Network & Security'],
+                industries: ['Healthcare'],
+                tags: ['Healthcare IT', 'HIPAA-Aligned', 'Medical Device Security', '24/7 Uptime', 'Audit Support', 'PMP'],
+                flagship: true
+            },
+            {
+                id: 'hr-workforce',
+                title: 'Enterprise HR & Workforce Management',
+                subtitle: '9 Organizations - Time & Attendance, Payroll Integration',
+                excerpt: 'Enterprise HR applications for 9 organizations (Al Habbai Contracting, 3 contracting companies, 5 manufacturing companies). Agile methodology (2-week sprints). Vendor SDKs from 10+ time & attendance manufacturers (ZKTeco, Suprema, Anviz, eSSL). Microsoft Azure cloud platform. Data protection controls (encryption at rest/in transit, role-based access, audit logging). UAE Labor Law compliance. Eliminated manual attendance reconciliation saving 200+ hours/month per client. 95%+ accuracy.',
+                technologies: ['Enterprise Applications', 'Cloud & Migration', 'Mobile & Workforce Management'],
+                industries: ['Manufacturing & Industrial', 'Corporate Enterprise'],
+                tags: ['Agile (2-week sprints)', 'Microsoft Azure', 'Data Protection', 'Third-Party Risk', '9 Organizations'],
+                flagship: true
+            },
+            {
+                id: 'insead',
+                title: 'INSEAD Business School - Complete ELV',
+                subtitle: 'Amphitheatre, Training Rooms, Auditorium - Abu Dhabi Campus',
+                excerpt: 'Complete ELV program for INSEAD French International Business School, Abu Dhabi Campus. Amphitheatre audio (line arrays, delay speakers), training room AV (interactive displays 80"/65", Barco ClickShare wireless presentation), lecture capture systems, video conferencing (Cisco Webex Room Kit for distance learning), Crestron control (one-touch meeting start, automated lighting), DSP audio processing, ceiling microphone arrays. Met international business school standards.',
+                technologies: ['ELV & Building Systems'],
+                industries: ['Education'],
+                tags: ['Crestron Control', 'AV Systems', 'Video Conferencing', 'Lecture Capture', 'Executive Education']
+            },
+            {
+                id: 'american-university',
+                title: 'American University - Campus Infrastructure',
+                subtitle: '5,000+ Student/Staff Network - Fiber Backbone, Aruba WiFi',
+                excerpt: 'Campus-wide infrastructure for American University Abu Dhabi (5,000+ students/staff). Data cabling (Cat6/Cat6A all buildings), fiber optic backbone (OM3/OM4 between buildings, 10Gbps core), redundant fiber paths. Aruba controller and AP deployment (high-density WiFi for lecture halls/libraries, outdoor WiFi for campus grounds, seamless roaming). Core-distribution-access network topology (redundant core switches, VLAN segmentation: students, staff, guests, admin). PoE+ for wireless APs and VoIP. 99.5% WiFi coverage.',
+                technologies: ['Network & Security', 'Data Center & Infrastructure'],
+                industries: ['Education'],
+                tags: ['Structured Cabling', 'Fiber Backbone', 'Aruba WiFi', '5,000+ Users', 'Campus Network']
+            },
+            {
+                id: 'cloud-migration',
+                title: 'Enterprise Cloud Migration Programs',
+                subtitle: '5+ Organizations - Exchange to Microsoft 365',
+                excerpt: 'Lift-and-shift migrations from on-premises Exchange to Microsoft 365 for 5+ enterprise clients (50-500 user organizations). Migration planning (mailbox assessment, wave planning, pilot testing), Azure AD synchronization (Azure AD Connect), Exchange Online configuration, compliance policy migration (retention, DLP), PST import, mobile device policies (Intune), user training (Outlook/OneDrive/SharePoint/Teams). Zero-downtime migrations, 100% data integrity, 95%+ user satisfaction. 60% reduction in email infrastructure costs.',
+                technologies: ['Cloud & Migration', 'Enterprise Applications'],
+                industries: ['Corporate Enterprise'],
+                tags: ['Microsoft 365', 'Exchange Online', 'Azure AD', 'Cloud Migration', '5+ Organizations']
+            },
+            {
+                id: 'corporate-av',
+                title: 'Corporate AV Automation - Boardrooms & Meeting Rooms',
+                subtitle: '8+ Boardrooms, 25+ Meeting Rooms Across Corporate Clients',
+                excerpt: 'Executive boardroom and meeting room technology programs for 8+ corporate clients (professional services, legal, financial sectors). Boardrooms (8+): Crestron/Extron control, one-touch meeting start, Zoom Rooms/Microsoft Teams Rooms, wireless presentation (Barco ClickShare/Mersive Solstice), 75"-100" displays, lighting control (Lutron/Dynalite), motorized shades, camera tracking. Meeting rooms (25+): Interactive displays 65"-86" (Promethean/SMART/Surface Hub), ceiling mics (Shure/ClearOne), PTZ cameras. One-touch start reduced setup from 10 minutes to 30 seconds. 90% reduction in IT support calls.',
+                technologies: ['ELV & Building Systems'],
+                industries: ['Corporate Enterprise'],
+                tags: ['8+ Boardrooms', '25+ Meeting Rooms', 'Crestron/Extron', 'Zoom Rooms', 'MS Teams Rooms', 'One-Touch Start']
+            },
+            {
+                id: 'manufacturing',
+                title: 'Manufacturing Infrastructure Programs',
+                subtitle: 'Network Upgrades with Zero Production Downtime',
+                excerpt: 'Network infrastructure upgrades for manufacturing facilities (automotive parts, food processing, industrial equipment) ensuring zero production downtime. Structured cabling upgrade (Cat6A data 1,000+ drops per facility, OM3/OM4 fiber backbone, Fluke DSX-5000 testing/certification). Network core/edge upgrade (Cisco Nexus core switches redundant pair, HP Aruba distribution/access, 10Gbps backbone, PoE+ for IP phones/cameras/APs, VLAN segmentation production/office/guest/IoT, QoS for production traffic). Industrial WiFi (warehouse APs, production floor connectivity, 200+ wireless devices). 99.9% uptime.',
+                technologies: ['Network & Security', 'Data Center & Infrastructure'],
+                industries: ['Manufacturing & Industrial'],
+                tags: ['Structured Cabling', 'Cisco Nexus', 'HP Aruba', 'Industrial WiFi', 'Zero Downtime']
+            },
+            {
+                id: 'enterprise-wifi',
+                title: 'Enterprise WiFi Upgrade Programs',
+                subtitle: 'TP-Link Omada, Ubiquiti UniFi, HP Aruba Deployments',
+                excerpt: 'Wireless network upgrades across corporate, education, hospitality, healthcare clients. TP-Link Omada (cost-effective SMB, centralized controller, guest portal with vouchers), Ubiquiti UniFi (education/hospitality, UniFi Controller cloud/on-prem, analytics, device fingerprinting), HP Aruba (enterprise corporate/healthcare, ClearPass 802.1X authentication, policy-based access control, Aruba Central AI-powered insights). Multiple SSID (corporate/guest/IoT), RADIUS authentication, captive portal, bandwidth management/QoS. 99%+ WiFi coverage, seamless roaming, 500+ concurrent user support, 95%+ satisfaction. 60% reduction in help desk calls.',
+                technologies: ['Network & Security'],
+                industries: ['Corporate Enterprise', 'Education', 'Hospitality & Residential', 'Healthcare'],
+                tags: ['TP-Link Omada', 'Ubiquiti UniFi', 'HP Aruba', 'WiFi 6', 'Enterprise WiFi']
+            },
+            {
+                id: 'ibm-legacy',
+                title: 'IBM Legacy System Modernization - COBOL ERP',
+                subtitle: 'Hardware Migration: Power7 → Power9 (Not Application Migration)',
+                excerpt: 'Critical IBM AS/400 (iSeries) hardware upgrade supporting legacy COBOL ERP for manufacturing/distribution enterprise. IBM Power Systems upgrade (Power7 → Power9 server, increased memory/processor, OS upgrade IBM i 7.4). Storage migration (IBM FlashSystem all-flash, SAN fabric upgrade 16Gbps Fibre Channel, snapshot/replication). COBOL ERP compatibility testing (application compatibility, COBOL program validation, database integrity, interface testing, UAT). All COBOL application changes managed by application vendor. 60% performance improvement in ERP transactions. Zero ERP downtime during upgrade. Extended platform lifespan 5+ years.',
+                technologies: ['Data Center & Infrastructure'],
+                industries: ['Manufacturing & Industrial'],
+                tags: ['IBM AS/400', 'Power Systems', 'COBOL ERP', 'IBM FlashSystem', 'Legacy Modernization']
+            },
+            {
+        id: 'qmatic-cem',
+        title: 'Qmatic Customer Experience Management',
+        subtitle: '50+ MOHRE Government Centers + British Council + Healthcare',
+        excerpt: 'Multi-sector deployment across 50+ MOHRE government centers, British Council, and healthcare facilities. Centralized queue management, digital signage, happiness meter integration, and real-time analytics. 35% wait time reduction, 92% citizen satisfaction.',
+        technologies: ['Enterprise Applications', 'ELV & Building Systems'],
+        industries: ['Government & Public Sector', 'Healthcare'],
+        tags: ['Qmatic CEM', 'Digital Signage', 'Government Integration', '50+ Centers'],
+        flagship: false
+    },
+    {
+        id: 'rfid-asset-tracking',
+        title: 'RFID Asset & Inventory Tracking',
+        subtitle: 'Abu Dhabi Airport + ANABEEB Manufacturing',
+        excerpt: 'Enterprise RFID implementation for Abu Dhabi Airport and ANABEEB Manufacturing. Real-time location tracking, inventory management, finance module integration. 95%+ inventory accuracy (from 78%), 60% faster stock-taking, $200K annual savings.',
+        technologies: ['Mobile & Workforce Management', 'Enterprise Applications'],
+        industries: ['Manufacturing & Industrial', 'Retail & Commercial'],
+        tags: ['RFID', 'RTLS', 'Asset Tracking', 'Airport Operations'],
+        flagship: false
+    },
+    {
+        id: 'multi-brand-retail',
+        title: 'Multi-Brand Retail Integration (250+ Locations)',
+        subtitle: 'Jashanmal Group + Burberry Across UAE & GCC',
+        excerpt: 'Centralized time & attendance for 250+ retail locations (Jashanmal, Burberry) across UAE and GCC. Custom WebAPI, multi-vendor integration (10+ brands), Oracle ERP integration. 80% faster payroll processing, eliminated discrepancies.',
+        technologies: ['Enterprise Applications', 'Mobile & Workforce Management'],
+        industries: ['Retail & Commercial'],
+        tags: ['250+ Locations', 'Oracle ERP', 'Custom API', 'Multi-Vendor'],
+        flagship: false
+    },
+    {
+        id: 'ags-peoplesoft',
+        title: 'AGS Switchgear - PeopleSoft Integration',
+        subtitle: 'Time & Attendance to HRMS Payroll Integration',
+        excerpt: 'T&A integration with PeopleSoft HRMS payroll module. Custom API development, automated shift calculations, workflow automation. 99.8% payroll accuracy, 80% faster processing (5 days to 1 day), 200+ hours saved monthly.',
+        technologies: ['Enterprise Applications'],
+        industries: ['Manufacturing & Industrial'],
+        tags: ['PeopleSoft HRMS', 'API Integration', 'Payroll Automation'],
+        flagship: false
+    },
+    {
+        id: 'federal-national-council',
+        title: 'Federal National Council - SolarWinds ITSM',
+        subtitle: 'UAE Parliament IT Service Management',
+        excerpt: 'ITIL-aligned service desk for UAE Parliament. Incident/problem/change management, asset tracking, service catalog. 95% SLA compliance, 30% faster resolution, comprehensive audit trail for parliamentary operations.',
+        technologies: ['Enterprise Applications'],
+        industries: ['Government & Public Sector'],
+        tags: ['ITSM', 'ITIL', 'SolarWinds', 'Parliamentary'],
+        flagship: false
+    },
+    {
+        id: 'mall-technology',
+        title: 'Mall Technology Programs',
+        subtitle: 'ASHWAQ & Khalidiya Mall with 6+ Year MSP',
+        excerpt: 'Integrated technology for commercial malls: control rooms, structured cabling, Aruba WiFi (10,000+ users), IP CCTV, Avaya telephony, corporate AV. 24/7 managed services, 98% SLA compliance, 6+ year client relationship.',
+        technologies: ['ELV & Building Systems', 'Network & Security', 'Enterprise Telephony & UC'],
+        industries: ['Retail & Commercial'],
+        tags: ['Commercial Real Estate', 'MSP', 'Aruba WiFi', '6+ Years'],
+        flagship: false
+    },
+    {
+        id: 'premium-building-automation',
+        title: 'Premium Building Automation',
+        subtitle: 'Luxury Residential + Hotels (15+ Properties)',
+        excerpt: 'High-end building automation: A320 Airbus home, 10+ villas, 3 palaces, hotels (Radisson Blu, Crown Plaza, Presidential Palace). Crestron, Savant, Lutron control systems. Integrated lighting, climate, AV, security.',
+        technologies: ['ELV & Building Systems'],
+        industries: ['Hospitality & Premium Residential'],
+        tags: ['Crestron', 'Savant', 'Lutron', 'Luxury Residential'],
+        flagship: false
+    },
+
+        ];
+
+        // Filter to show only ICT projects
+        const ict_projects = projects.filter(p => ict_project_ids.includes(p.id));
+
+        // Technology and Industry categories
+        const technologies = [
+
+            'Data Center & Infrastructure',
+            'ELV & Building Systems',
+            'Enterprise Telephony & UC',
+            'Network & Security',
+            'Cloud & Migration',
+            'Enterprise Applications',
+            'Mobile & Workforce Management',
+            'RPA & Automation'
+        
+        ];
+
+        const industries = [
+
+            'Banking & Financial Services',
+            'Government & Public Sector',
+            'Healthcare',
+            'Education',
+            'Retail & Commercial',
+            'Manufacturing & Industrial',
+            'Corporate Enterprise',
+            'Hospitality & Residential'
+        
+        ];
+
+        let currentView = 'all';
+        let currentFilter = null;
+
+        // Initialize
+        function init() {
+            showAllProjects();
+        }
+
+        // Switch between views
+        function switchView(view) {
+            currentView = view;
+            currentFilter = null;
+
+            // Update nav buttons
+            document.querySelectorAll('.nav-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            event?.target?.classList.add('active');
+
+            if (view === 'all') {
+                showAllProjects();
+            } else if (view === 'technology') {
+                showTechnologyView();
+            } else if (view === 'industry') {
+                showIndustryView();
+            }
+        }
+
+        // Show all projects
+        function showAllProjects() {
+            document.getElementById('sidebar').classList.add('hidden');
+            
+            let html = '<h2>All Projects (25 Major Programs • 8 Flagship)</h2>';
+            html += '<p style="color: #64748b; margin-bottom: 2rem;">Complete portfolio of enterprise technology programs delivered across 7 industries. Flagship projects represent the most comprehensive, multi-year programs with detailed documentation.</p>';
+            
+            // Stats grid
+            html += '<div class="stats-grid">';
+            const stats = [
+                { number: "300+", label: "Enterprise Projects" },
+                { number: "$15M+", label: "Cumulative Budgets" },
+                { number: "88-90%", label: "On-Time Delivery" },
+                { number: "20+", label: "Virtualization Projects" },
+                { number: "30+", label: "Telephony Projects" },
+                { number: "5+", label: "DC Relocations" },
+                { number: "7", label: "Industry Sectors" },
+                { number: "95%+", label: "Client Satisfaction" }
+            ];
+            stats.forEach(stat => {
+                html += `
+                    <div class="stat-card">
+                        <div class="stat-number">${stat.number}</div>
+                        <div class="stat-label">${stat.label}</div>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            // All project cards
+            ict_projects.forEach(project => {
+                html += createProjectCard(project);
+            });
+
+            document.getElementById('mainContent').innerHTML = html;
+        }
+
+        // Show technology view
+        function showTechnologyView() {
+            document.getElementById('sidebar').classList.remove('hidden');
+            document.getElementById('filterTitle').textContent = 'Filter by Technology';
+            
+            // Populate filters
+            let filterHtml = '';
+            technologies.forEach(tech => {
+                const count = ict_projects.filter(p => p.technologies.includes(tech)).length;
+                filterHtml += `
+                    <div class="filter-item" onclick="filterByTechnology('${tech}')">
+                        <span>${tech}</span>
+                        <span class="count-badge">${count}</span>
+                    </div>
+                `;
+            });
+            document.getElementById('filterContent').innerHTML = filterHtml;
+
+            // Show all projects initially
+            let html = '<h2>Projects by Technology</h2>';
+            html += '<p style="color: #64748b; margin-bottom: 2rem;">Select a technology category from the sidebar to filter projects</p>';
+            ict_projects.forEach(project => {
+                html += createProjectCard(project);
+            });
+            document.getElementById('mainContent').innerHTML = html;
+        }
+
+        // Show industry view
+        function showIndustryView() {
+            document.getElementById('sidebar').classList.remove('hidden');
+            document.getElementById('filterTitle').textContent = 'Filter by Industry';
+            
+            // Populate filters
+            let filterHtml = '';
+            industries.forEach(industry => {
+                const count = ict_projects.filter(p => p.industries.includes(industry)).length;
+                filterHtml += `
+                    <div class="filter-item" onclick="filterByIndustry('${industry}')">
+                        <span>${industry}</span>
+                        <span class="count-badge">${count}</span>
+                    </div>
+                `;
+            });
+            document.getElementById('filterContent').innerHTML = filterHtml;
+
+            // Show all projects initially
+            let html = '<h2>Projects by Industry</h2>';
+            html += '<p style="color: #64748b; margin-bottom: 2rem;">Select an industry sector from the sidebar to filter projects</p>';
+            ict_projects.forEach(project => {
+                html += createProjectCard(project);
+            });
+            document.getElementById('mainContent').innerHTML = html;
+        }
+
+        // Filter by technology
+        function filterByTechnology(tech) {
+            currentFilter = tech;
+            
+            // Update active state
+            document.querySelectorAll('.filter-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent.includes(tech)) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Filter projects
+            const filtered = ict_projects.filter(p => p.technologies.includes(tech));
+            
+            let html = `<h2>${tech}</h2>`;
+            html += `<p style="color: #64748b; margin-bottom: 2rem;">${filtered.length} projects in this category</p>`;
+            
+            filtered.forEach(project => {
+                html += createProjectCard(project);
+            });
+            
+            document.getElementById('mainContent').innerHTML = html;
+        }
+
+        // Filter by industry
+        function filterByIndustry(industry) {
+            currentFilter = industry;
+            
+            // Update active state
+            document.querySelectorAll('.filter-item').forEach(item => {
+                item.classList.remove('active');
+                if (item.textContent.includes(industry)) {
+                    item.classList.add('active');
+                }
+            });
+
+            // Filter projects
+            const filtered = ict_projects.filter(p => p.industries.includes(industry));
+            
+            let html = `<h2>${industry}</h2>`;
+            html += `<p style="color: #64748b; margin-bottom: 2rem;">${filtered.length} projects in this sector</p>`;
+            
+            filtered.forEach(project => {
+                html += createProjectCard(project);
+            });
+            
+            document.getElementById('mainContent').innerHTML = html;
+        }
+
+        // Create project card HTML
+        function createProjectCard(project) {
+            const flagshipClass = project.flagship ? ' flagship' : '';
+            const flagshipBadge = project.flagship ? '<span class="flagship-badge">🏆 FLAGSHIP</span>' : '';
+            
+            return `
+                <div class="project-card${flagshipClass}">
+                    <div class="project-title">
+                        ${project.title}
+                        ${flagshipBadge}
+                    </div>
+                    <div class="project-subtitle">${project.subtitle}</div>
+                    <div class="project-excerpt">${project.excerpt}</div>
+                    <div class="project-tags">
+                        ${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                    </div>
+                    <a href="projects/${project.id}.html" class="view-details-btn">View Full Project Details →</a>
+                </div>
+            `;
+        }
+
+        // Initialize on load
+        window.onload = init;
+    </script>
+</body>
+</html>
