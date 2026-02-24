@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# This portfolio is private and should not be indexed by search engines
+# Only accessible via direct link sharing
