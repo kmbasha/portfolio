@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-    <title>KM Basha - Senior Project Manager — AV / ICT & ELV Systems Integration</title>
+    <title>KM Basha - Senior Project Manager Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -16,302 +16,180 @@
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
-            color: #1e293b;
-            background: #f1f5f9;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            padding: 2rem 1.5rem 2.5rem;
         }
 
-        /* ── HERO ─────────────────────────────────────── */
-        .hero {
-            background: linear-gradient(160deg, #0f172a 0%, #1e3a8a 55%, #1d4ed8 100%);
-            padding: 5rem 2rem 4.5rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background:
-                radial-gradient(ellipse at 70% 10%, rgba(99,102,241,0.2) 0%, transparent 60%),
-                radial-gradient(ellipse at 20% 90%, rgba(30,64,175,0.3) 0%, transparent 50%);
-            pointer-events: none;
-        }
-
-        .hero-inner {
-            max-width: 800px;
+        .container {
+            max-width: 1260px;
+            width: 100%;
             margin: 0 auto;
-            position: relative;
-            z-index: 1;
         }
 
-        /* Name */
-        .hero-name {
-            font-size: 3.4rem;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: -1.5px;
-            margin-bottom: 0.6rem;
-            line-height: 1.1;
-        }
-
-        /* Role */
-        .hero-role {
-            font-size: 1.15rem;
-            font-weight: 600;
-            color: #93c5fd;
-            margin-bottom: 1.6rem;
-            letter-spacing: 0.3px;
-        }
-
-        /* Divider */
-        .hero-divider {
-            width: 48px;
-            height: 3px;
-            background: linear-gradient(90deg, #3b82f6, #818cf8);
-            border-radius: 2px;
-            margin: 0 auto 1.6rem;
-        }
-
-        /* Summary */
-        .hero-summary {
-            font-size: 0.98rem;
-            color: #cbd5e1;
-            max-width: 640px;
-            margin: 0 auto 2.2rem;
-            line-height: 1.8;
-        }
-
-        /* Domain badges */
-        .domain-badges {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 0.55rem;
-            margin-bottom: 2.2rem;
-        }
-
-        .badge {
-            background: rgba(255,255,255,0.1);
-            border: 1px solid rgba(255,255,255,0.22);
-            color: #e2e8f0;
-            padding: 0.38rem 1rem;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 0.4px;
+        /* ── HERO ── */
+        header {
+            color: white;
+            margin-bottom: 1.75rem;
+            padding: 2rem 2.5rem;
+            background: rgba(255,255,255,0.08);
+            border-radius: 16px;
             backdrop-filter: blur(6px);
-            transition: background 0.2s;
+            border: 1px solid rgba(255,255,255,0.15);
         }
 
-        .badge:hover {
-            background: rgba(255,255,255,0.18);
-        }
-
-        /* Credentials row */
-        .hero-credentials {
+        .hero-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             align-items: center;
-            gap: 0.4rem 0;
-            margin-bottom: 2.2rem;
+            justify-content: space-between;
+            gap: 48px;
+            width: 100%;
         }
 
-        .cred-item {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.35rem;
-            font-size: 0.82rem;
-            font-weight: 600;
-            color: #94a3b8;
-            padding: 0 0.9rem;
-            border-right: 1px solid rgba(255,255,255,0.15);
+        .hero-text {
+            flex: 1;
+            max-width: 850px;
+            text-align: left;
         }
 
-        .cred-item:last-child {
-            border-right: none;
-        }
-
-        .cred-item .cred-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #3b82f6;
+        .hero-image {
             flex-shrink: 0;
         }
 
-        /* Contact bar */
-        .contact-bar {
-            display: inline-flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 0.4rem 1.4rem;
-            background: rgba(255,255,255,0.07);
-            border: 1px solid rgba(255,255,255,0.14);
-            border-radius: 12px;
-            padding: 0.85rem 2rem;
-            font-size: 0.88rem;
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 6px 25px rgba(0,0,0,0.28);
+            border: 3px solid rgba(255,255,255,0.35);
         }
 
-        .contact-bar a {
-            color: #bfdbfe;
-            text-decoration: none;
-            font-weight: 500;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: color 0.2s;
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.35rem;
+            font-weight: 700;
+            letter-spacing: -1px;
         }
 
-        .contact-bar a:hover {
-            color: #ffffff;
-        }
-
-        .contact-divider {
-            color: rgba(255,255,255,0.2);
-            font-size: 1rem;
-        }
-
-        /* ── PAGE BODY ────────────────────────────────── */
-        .page-body {
-            max-width: 1180px;
-            margin: 0 auto;
-            padding: 3.5rem 2rem 4rem;
-        }
-
-        /* ── SECTION HEADING ──────────────────────────── */
-        .section-heading {
-            text-align: center;
+        header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.97;
             margin-bottom: 0.6rem;
+            font-weight: 600;
         }
 
-        .section-heading h2 {
-            font-size: 1.7rem;
-            font-weight: 800;
-            color: #0f172a;
-            letter-spacing: -0.5px;
+        header .description {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 0.75rem;
+            line-height: 1.65;
         }
 
-        .section-heading p {
-            font-size: 0.92rem;
-            color: #64748b;
-            margin-top: 0.4rem;
+        header .domains {
+            font-size: 0.97rem;
+            opacity: 0.92;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
-        .section-rule {
-            width: 40px;
-            height: 3px;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            border-radius: 2px;
-            margin: 0.9rem auto 2.5rem;
+        header .credentials {
+            font-size: 0.97rem;
+            opacity: 0.88;
+            margin-bottom: 0.35rem;
         }
 
-        /* ── PORTFOLIO CARDS ──────────────────────────── */
+        header .contact {
+            font-size: 0.93rem;
+            opacity: 0.82;
+            margin-top: 0.2rem;
+        }
+
+        header .contact a {
+            color: #d4e3ff;
+            text-decoration: none;
+        }
+
+        header .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* ── INTRO LINE ── */
+        .portfolio-intro {
+            text-align: center;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 500;
+            margin: 0 0 1.25rem 0;
+            opacity: 0.95;
+        }
+
+        /* ── PORTFOLIO CARDS ── */
         .portfolio-selection {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(460px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
             gap: 2rem;
-            margin-bottom: 3.5rem;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
         }
 
         .portfolio-card {
-            background: #ffffff;
+            background: white;
             border-radius: 16px;
-            padding: 2.8rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 8px 24px rgba(0,0,0,0.08);
-            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             text-decoration: none;
             color: inherit;
             display: block;
-            border-top: 4px solid #1e3a8a;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .portfolio-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: linear-gradient(90deg, #1e3a8a, #3b82f6);
-            transform: scaleX(0);
-            transition: transform 0.3s ease;
-            transform-origin: left;
         }
 
         .portfolio-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 8px rgba(0,0,0,0.08), 0 20px 48px rgba(30,58,138,0.14);
-        }
-
-        .portfolio-card:hover::after {
-            transform: scaleX(1);
-        }
-
-        .card-icon {
-            font-size: 2.2rem;
-            margin-bottom: 1.1rem;
-            display: block;
+            transform: translateY(-8px);
+            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
         }
 
         .portfolio-card h2 {
-            font-size: 1.35rem;
-            font-weight: 700;
-            color: #0f172a;
-            margin-bottom: 0.4rem;
-            line-height: 1.35;
+            font-size: 1.75rem;
+            color: #1e3a8a;
+            margin-bottom: 0.6rem;
+            line-height: 1.3;
         }
 
         .portfolio-card .subtitle {
-            font-size: 0.85rem;
+            font-size: 1rem;
             color: #64748b;
-            margin-bottom: 1.6rem;
-            font-style: italic;
+            margin-bottom: 1.25rem;
         }
 
         .portfolio-card ul {
             list-style: none;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
         }
 
         .portfolio-card li {
-            padding: 0.45rem 0;
-            padding-left: 1.4rem;
+            padding: 0.4rem 0;
+            padding-left: 1.5rem;
             position: relative;
             color: #475569;
-            font-size: 0.93rem;
-            border-bottom: 1px solid #f8fafc;
-        }
-
-        .portfolio-card li:last-child {
-            border-bottom: none;
         }
 
         .portfolio-card li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #2563eb;
-            font-weight: 700;
-            font-size: 0.85rem;
+            color: #3b82f6;
+            font-weight: bold;
         }
 
         .portfolio-card .stats {
             display: flex;
             justify-content: space-around;
-            margin-top: 1.8rem;
-            padding-top: 1.6rem;
-            border-top: 1px solid #f1f5f9;
-            background: #f8fafc;
-            border-radius: 10px;
-            padding: 1.2rem 1rem;
+            margin-top: 1.5rem;
+            padding-top: 1.5rem;
+            border-top: 2px solid #e5e7eb;
         }
 
         .portfolio-card .stat {
@@ -319,57 +197,68 @@
         }
 
         .portfolio-card .stat-number {
-            font-size: 1.6rem;
-            font-weight: 800;
+            font-size: 1.8rem;
+            font-weight: bold;
             color: #1e3a8a;
-            line-height: 1.2;
         }
 
         .portfolio-card .stat-label {
-            font-size: 0.72rem;
-            color: #94a3b8;
+            font-size: 0.9rem;
+            color: #64748b;
             margin-top: 0.25rem;
-            text-transform: uppercase;
-            letter-spacing: 0.6px;
-            font-weight: 600;
         }
 
         .portfolio-card .btn {
             display: inline-block;
-            background: #1e3a8a;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 0.78rem 1.8rem;
+            padding: 0.9rem 2rem;
             border-radius: 8px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
-            margin-top: 1.8rem;
-            transition: background 0.2s ease, transform 0.15s ease;
-            letter-spacing: 0.2px;
+            font-size: 1.05rem;
+            margin-top: 1.25rem;
+            transition: opacity 0.3s ease;
         }
 
         .portfolio-card .btn:hover {
-            background: #1d4ed8;
-            transform: translateX(3px);
+            opacity: 0.9;
         }
 
-        /* ── FOOTER ───────────────────────────────────── */
+        /* ── FOOTER ── */
         footer {
             text-align: center;
-            color: #94a3b8;
-            font-size: 0.82rem;
-            padding-top: 0.5rem;
-            padding-bottom: 1rem;
-            border-top: 1px solid #e2e8f0;
+            color: white;
+            opacity: 0.88;
+            margin-top: 2rem;
+            font-size: 0.95rem;
         }
 
-        /* ── RESPONSIVE ───────────────────────────────── */
-        @media (max-width: 968px) {
-            .hero-name {
-                font-size: 2.4rem;
+        /* ── RESPONSIVE ── */
+        @media (max-width: 768px) {
+            .hero-container {
+                flex-direction: column;
+                text-align: center;
+                gap: 24px;
             }
-            .hero-role {
-                font-size: 1rem;
+
+            .hero-text {
+                text-align: center;
+                max-width: 100%;
+            }
+
+            .profile-image {
+                width: 140px;
+                height: 140px;
+            }
+        }
+
+        @media (max-width: 968px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            header .subtitle {
+                font-size: 1.05rem;
             }
             .portfolio-selection {
                 grid-template-columns: 1fr;
@@ -378,89 +267,33 @@
                 padding: 2rem;
             }
             .portfolio-card h2 {
-                font-size: 1.2rem;
-            }
-            .cred-item {
-                padding: 0 0.6rem;
-                font-size: 0.78rem;
-            }
-        }
-
-        @media (max-width: 520px) {
-            .hero {
-                padding: 3.5rem 1.25rem 3rem;
-            }
-            .hero-name {
-                font-size: 2rem;
-                letter-spacing: -1px;
-            }
-            .contact-bar {
-                padding: 0.7rem 1.2rem;
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            .contact-divider {
-                display: none;
-            }
-            .hero-credentials {
-                flex-direction: column;
-                gap: 0.4rem;
-            }
-            .cred-item {
-                border-right: none;
+                font-size: 1.4rem;
             }
         }
     </style>
 </head>
 <body>
-
-    <!-- ── HERO ── -->
-    <div class="hero">
-        <div class="hero-inner">
-
-            <h1 class="hero-name">KM BASHA</h1>
-            <div class="hero-role">Senior Project Manager — AV / ICT &amp; ELV Systems Integration</div>
-            <div class="hero-divider"></div>
-            <p class="hero-summary">Delivering ICT infrastructure, CCTV, access control, AV and integrated technology projects across enterprise, government, healthcare, aviation and commercial environments.</p>
-
-            <div class="domain-badges">
-                <span class="badge">CCTV</span>
-                <span class="badge">Access Control</span>
-                <span class="badge">AV Systems</span>
-                <span class="badge">ICT Infrastructure</span>
-                <span class="badge">ELV Systems</span>
+    <div class="container">
+        <header>
+            <div class="hero-container">
+                <div class="hero-text">
+                    <h1>KM BASHA</h1>
+                    <div class="subtitle">Senior Project Manager — AV / ICT &amp; ELV Systems Integration</div>
+                    <div class="description">Portfolio of delivered ICT infrastructure, CCTV, access control, AV, ELV and integrated technology projects across commercial, government, enterprise, healthcare, aviation and banking environments.</div>
+                    <div class="domains">Domain Focus: CCTV | Access Control | AV Systems | ICT Infrastructure | ELV Systems</div>
+                    <div class="credentials">Credentials: PMP | PRINCE2 Practitioner | CISA | Melbourne, VIC</div>
+                    <div class="contact">Contact: <a href="mailto:kmbasha@gmail.com">kmbasha@gmail.com</a> | <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank">linkedin.com/in/mahaboob-b-483b1116</a></div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/images/profile.jpg" alt="KM Basha — Senior Project Manager" class="profile-image" />
+                </div>
             </div>
+        </header>
 
-            <div class="hero-credentials">
-                <span class="cred-item"><span class="cred-dot"></span>PMP Certified</span>
-                <span class="cred-item"><span class="cred-dot"></span>PRINCE2 Practitioner</span>
-                <span class="cred-item"><span class="cred-dot"></span>CISA</span>
-                <span class="cred-item"><span class="cred-dot"></span>Melbourne, VIC</span>
-                <span class="cred-item"><span class="cred-dot"></span>Australian PR</span>
-            </div>
-
-            <div class="contact-bar">
-                <a href="mailto:kmbasha@gmail.com">📧 kmbasha@gmail.com</a>
-                <span class="contact-divider">|</span>
-                <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank" rel="noopener noreferrer">🔗 linkedin.com/in/mahaboob-b-483b1116</a>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- ── PORTFOLIO SECTION ── -->
-    <div class="page-body">
-
-        <div class="section-heading">
-            <h2>Project Portfolios</h2>
-            <p>Explore selected project portfolios by delivery domain.</p>
-        </div>
-        <div class="section-rule"></div>
+        <p class="portfolio-intro">Explore selected project portfolios by delivery domain.</p>
 
         <div class="portfolio-selection">
-
             <a href="ict/index.html" class="portfolio-card">
-                <span class="card-icon">🖥️</span>
                 <h2>ICT Infrastructure &amp; Enterprise Systems Projects</h2>
                 <div class="subtitle">Project delivery portfolio — selected systems, programs and outcomes</div>
                 <ul>
@@ -489,7 +322,6 @@
             </a>
 
             <a href="elv/index.html" class="portfolio-card">
-                <span class="card-icon">🔒</span>
                 <h2>CCTV, Access Control &amp; AV Systems Projects</h2>
                 <div class="subtitle">Project delivery portfolio — selected systems, programs and outcomes</div>
                 <ul>
@@ -516,14 +348,11 @@
                     <span class="btn">View ELV Portfolio →</span>
                 </div>
             </a>
-
         </div>
 
         <footer>
             <p>A growing portfolio of ICT, AV, ELV, CCTV, access control and integrated technology projects delivered across multiple industries.</p>
         </footer>
-
     </div>
-
 </body>
 </html>
