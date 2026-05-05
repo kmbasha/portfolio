@@ -337,11 +337,11 @@
         <h1>KM BASHA</h1>
         <p>Senior Project Manager | PMP #4075113 | PRINCE2 Practitioner | CISA | ISACA Member #2212081</p>
         <p>Technical Background + 30 Years Experience | Melbourne, VIC</p>
-        <p>ICT Infrastructure &amp; Enterprise IT Projects</p>
+        <p>ICT Infrastructure &amp; Enterprise Systems Projects</p>
     </header>
 
     <div class="portfolio-title-banner">
-        <div class="title-text">📊 ICT INFRASTRUCTURE &amp; ENTERPRISE IT PORTFOLIO</div>
+        <div class="title-text">📊 ICT INFRASTRUCTURE &amp; ENTERPRISE SYSTEMS PORTFOLIO</div>
     </div>
 
     <div class="nav-container">
@@ -760,7 +760,7 @@
             const flagshipBadge = project.flagship ? '<span class="flagship-badge">🏆 FLAGSHIP</span>' : '';
             return `
                 <div class="project-card${flagshipClass}">
-                    <div class="project-title">${project.title}${flagshipBadge}</div>
+                    <div class="project-title">${project.title} ${flagshipBadge}</div>
                     <div class="project-subtitle">${project.subtitle}</div>
                     <div class="project-excerpt">${project.excerpt}</div>
                     <div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>

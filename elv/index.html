@@ -666,7 +666,7 @@
 
         function showAllProjects() {
             document.getElementById('sidebar').classList.add('hidden');
-            let html = '<h2>All ELV Projects (' + elv_projects.length + ' Programs)</h2>';
+            let html = '<h2>All CCTV, Access Control & AV Projects (' + elv_projects.length + ' Programs)</h2>';
             html += '<p style="color: #64748b; margin-bottom: 2rem;">Integrated ELV systems including CCTV, access control, AV, intercom, structured cabling and building technologies.</p>';
             html += '<div class="stats-grid">';
             const stats = [
@@ -750,7 +750,7 @@
             const flagshipBadge = project.flagship ? '<span class="flagship-badge">🏆 FLAGSHIP</span>' : '';
             return `
                 <div class="project-card${flagshipClass}">
-                    <div class="project-title">${project.title}${flagshipBadge}</div>
+                    <div class="project-title">${project.title} ${flagshipBadge}</div>
                     <div class="project-subtitle">${project.subtitle}</div>
                     <div class="project-excerpt">${project.excerpt}</div>
                     <div class="project-tags">${project.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
