@@ -4,157 +4,232 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>IKEA Multi-Location | KM Basha Portfolio</title>
+    <title>IKEA Yas Island Technology Upgrade | Mahaboob Basha Portfolio</title>
+    <meta name="description" content="Flagship retail technology upgrade at IKEA Yas Island involving CCTV, control room, video wall, digital signage, data centre infrastructure, API integration, night works and operational handover.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .header-content { max-width: 1200px; margin: 0 auto; }
-        .back-link { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; font-size: 0.95rem; opacity: 0.9; }
-        .back-link:hover { opacity: 1; }
-        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .subtitle { font-size: 1.2rem; opacity: 0.95; }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-        .content-card { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
-        .tag { background: #dbeafe; color: #1e40af; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
-        .project-content { color: #374151; }
-        .project-content h2 { color: #1e3a8a; font-size: 1.6rem; margin: 2rem 0 1rem 0; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
-        .project-content h3 { color: #1e3a8a; font-size: 1.3rem; margin: 1.5rem 0 0.75rem 0; }
-        .project-content strong { color: #1e3a8a; font-weight: 600; }
-        .project-content ul { margin-left: 2rem; margin-top: 0.5rem; }
-        .project-content li { margin: 0.5rem 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.65;
+            color: #1f2937;
+            background: #f4f7fb;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+            color: white;
+            padding: 2.5rem 1.25rem;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+        }
+        .header-content { max-width: 1120px; margin: 0 auto; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: rgba(255,255,255,0.92);
+            text-decoration: none;
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .back-link:hover { color: #ffffff; }
+        h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.03em; }
+        .subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: #dbeafe; max-width: 900px; }
+        .container { max-width: 1120px; margin: 2rem auto 3rem; padding: 0 1.25rem; }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: clamp(1.25rem, 3vw, 2rem);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            margin-bottom: 1.25rem;
+        }
+        .snapshot {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 2;
+        }
+        .snapshot-item {
+            background: #ffffff;
+            border: 1px solid #dbeafe;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        }
+        .snapshot-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 0.3rem; }
+        .snapshot-value { font-size: 1rem; color: #0f172a; font-weight: 800; }
+        .section-title { color: #0f172a; font-size: 1.35rem; margin-bottom: 0.9rem; letter-spacing: -0.01em; }
+        .section-lead { color: #475569; margin-bottom: 1rem; max-width: 920px; }
+        .tag-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.1rem; }
+        .tag { background: #e0f2fe; color: #075985; padding: 0.45rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 700; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+        .mini-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1rem; }
+        .mini-card h3 { color: #1e3a8a; font-size: 1rem; margin-bottom: 0.5rem; }
+        ul { padding-left: 1.15rem; margin-top: 0.5rem; }
+        li { margin: 0.4rem 0; padding-left: 0.2rem; }
+        .challenge { border-left: 5px solid #2563eb; }
+        .outcome { border-left: 5px solid #16a34a; }
+        .takeaway {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border: 1px solid #bfdbfe;
+        }
+        .footer-nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 999px;
+            padding: 0.8rem 1rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: #1e3a8a;
+        }
+        .btn.secondary { color: #1e3a8a; background: #dbeafe; }
+        @media (max-width: 900px) {
+            .snapshot { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: -2rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) {
+            header { padding: 2rem 1rem; }
+            .container { padding: 0 1rem; }
+            .snapshot { grid-template-columns: 1fr; }
+            .card { border-radius: 14px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <a href="../index.html" class="back-link">← Back to Portfolio</a>
-            <h1>IKEA Multi-Location Integrated Technology</h1>
-            <div class="subtitle">Yas Island Abu Dhabi, Dubai Festival City, Al Ain | $3.8M Program</div>
+            <h1>IKEA Yas Island – Customer Service Centre Technology Upgrade</h1>
+            <p class="subtitle">End-to-end technology upgrade within a live flagship retail environment involving CCTV, control room systems, video wall, digital signage, data centre infrastructure, compliance coordination and operational handover.</p>
         </div>
     </header>
-    <div class="container">
-        <div class="content-card">
-            <div class="tags">
-                <span class="tag">IKEA Global Standards</span>
-                <span class="tag">SIRA Compliant</span>
-                <span class="tag">Hybrid Methodology</span>
-                <span class="tag">EVM (CPI 1.04)</span>
-                <span class="tag">Axxon VMS</span>
-                <span class="tag">Matrox 3x6</span>
-                <span class="tag">8 operators</span>
+
+    <main class="container">
+        <section class="snapshot" aria-label="Project snapshot">
+            <div class="snapshot-item"><span>Industry</span><strong>Retail / Commercial</strong></div>
+            <div class="snapshot-item"><span>Environment</span><strong>Live Flagship Store</strong></div>
+            <div class="snapshot-item"><span>Scale</span><strong>USD 1–5M</strong></div>
+            <div class="snapshot-item"><span>Duration</span><strong>6 Months</strong></div>
+            <div class="snapshot-item"><span>Site</span><strong>IKEA Yas Island</strong></div>
+            <div class="snapshot-item"><span>Role</span><strong>End-to-End Project Manager</strong></div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-lead">This project involved upgrading integrated technology systems for the IKEA Yas Island Customer Service Centre inside a live retail environment. The site was a flagship IKEA store, requiring careful coordination around customer-facing operations, restricted delivery windows, compliance requirements and multiple technical workstreams.</p>
+            <div class="pill-list">
+                <span class="pill">Live retail upgrade</span>
+                <span class="pill">Customer Service Centre</span>
+                <span class="pill">Control room</span>
+                <span class="pill">Video wall</span>
+                <span class="pill">Digital signage</span>
+                <span class="pill">CCTV</span>
+                <span class="pill">Data centre / EMS</span>
+                <span class="pill">Night & weekend works</span>
             </div>
-            <div class="project-content">
-                <h2>Project Overview</h2>
-                <p>Led $3.8M integrated technology program across 3 IKEA locations (Yas Island Abu Dhabi, Dubai Festival City, Al Ain) managing 6 concurrent sub-projects: CCTV 500+ cameras, control room, VMS, POS integration, Qmatic CEM, digital signage. Coordinated 30+ team members and 8 vendor partners across 18-month delivery cycle.</p>
+        </section>
 
-                <h2>Key Achievements</h2>
+        <section class="grid-2">
+            <article class="card">
+                <h2 class="section-title">Delivery Environment</h2>
                 <ul>
-                    <li>Delivered turnkey solution <strong>on-time and under budget (EVM: CPI 1.04, SPI 1.01)</strong></li>
-                    <li><strong>Zero critical defects</strong> meeting IKEA global corporate standards</li>
-                    <li><strong>Reduced shrinkage by 35%</strong> (exceeded 30% target)</li>
-                    <li>Full <strong>SIRA compliance</strong> (UAE Security Industry Regulatory Agency)</li>
-                    <li>Successfully supported IKEA internal security audit</li>
+                    <li>Technology upgrade inside an operating flagship retail store.</li>
+                    <li>Customer-facing business continuity had to be protected during delivery.</li>
+                    <li>Work required night and weekend execution windows to reduce operational disruption.</li>
+                    <li>Coordination involved MEP contractor interfaces, subcontractors and internal technical resources.</li>
+                    <li>Compliance requirements included IKEA standards and local authority expectations.</li>
                 </ul>
+            </article>
 
-                <h2>Program Management Approach</h2>
-                <h3>Hybrid Waterfall-Agile Methodology</h3>
+            <article class="card">
+                <h2 class="section-title">Systems Delivered</h2>
                 <ul>
-                    <li><strong>Infrastructure delivery (CCTV, cabling, control room):</strong> Waterfall methodology due to physical construction dependencies</li>
-                    <li><strong>POS-CCTV integration software:</strong> Agile 2-week sprints for iterative development and testing</li>
-                    <li>PMBOK-aligned with emphasis on integration management coordinating multiple concurrent sub-systems</li>
+                    <li>CCTV and electronic security infrastructure.</li>
+                    <li>ELV room and control room technology coordination.</li>
+                    <li>2 × 4 matrix video wall environment.</li>
+                    <li>Bi-lingual digital signage and Customer Experience Management integration.</li>
+                    <li>Tier 2 data centre infrastructure and EMS coordination.</li>
+                    <li>Structured cabling and network readiness for integrated systems.</li>
+                    <li>API integration with CEM platform.</li>
                 </ul>
+            </article>
+        </section>
 
-                <h3>Procurement & Contract Management</h3>
-                <ul>
-                    <li>Developed RFP for security systems incorporating IKEA global security standards and UAE SIRA compliance</li>
-                    <li>Evaluated 6 bids using scoring matrix: IKEA-approved vendor status (40%), technical capability (30%), commercial proposal (20%), local support (10%)</li>
-                    <li>Negotiated turnkey fixed-price contract ($3.8M) with 12 milestone payments, 10% retention</li>
-                    <li>Verified contractor compliance: SIRA installation license, IKEA corporate vendor approval, insurance, safety certifications</li>
-                </ul>
-
-                <h3>Earned Value Management</h3>
-                <ul>
-                    <li>Tracked EVM for $3.8M program: <strong>CPI 1.04 (under budget), SPI 1.01 (on schedule)</strong></li>
-                    <li>Monthly variance analysis identified CCTV installation 5% ahead of schedule enabling early POS integration testing</li>
-                </ul>
-
-                <h2>Technical Scope Delivered</h2>
-                
-                <h3>Control Room</h3>
-                <ul>
-                    <li><strong>3x6 video wall</strong> (Matrox controller) - upgraded from initial 3x3 design</li>
-                    <li>6 operator workstations</li>
-                    <li>Centralized monitoring across all 3 locations</li>
-                    <li><strong>8 operators</strong> managing comprehensive surveillance</li>
-                </ul>
-
-                <h3>CCTV & Video Management</h3>
-                <ul>
-                    <li><strong>500+ IP cameras</strong> (Axis, Bosch) across 3 locations</li>
-                    <li><strong>VMS:</strong> Milestone XProtect and Axxon for custom integration and API development</li>
-                    <li>Redundant storage with failover servers</li>
-                    <li>Retention: <strong>90-day retail / 180-day retention</strong> (corrected from "180-day cash")</li>
-                </ul>
-
-                <h3>POS-CCTV Integration</h3>
-                <ul>
-                    <li>Transaction video association - link every POS transaction to video footage</li>
-                    <li>Anti-theft detection with automated suspicious transaction flagging</li>
-                    <li>Real-time monitoring integration</li>
-                </ul>
-
-                <h3>Customer Experience Systems</h3>
-                <ul>
-                    <li><strong>Qmatic queue management</strong> - reducing customer wait times</li>
-                    <li>Digital signage network with centralized content management</li>
-                    <li>Wayfinding and promotional content</li>
-                </ul>
-
-                <h2>Compliance & Quality</h2>
-                
-                <h3>SIRA Compliance</h3>
-                <p>Full compliance with UAE Security Industry Regulatory Agency requirements for CCTV system registration, installer licensing, system specifications.</p>
-
-                <h3>IKEA Global Standards</h3>
-                <ul>
-                    <li>Adhered to IKEA corporate security policies</li>
-                    <li>Camera placement standards ensuring comprehensive coverage</li>
-                    <li>Data retention policies aligned with IKEA global requirements</li>
-                    <li>Access control protocols</li>
-                </ul>
-
-                <h3>Vendor Due Diligence</h3>
-                <ul>
-                    <li>Verified all vendors (Axis, Bosch, Datapath, Matrox) on IKEA approved vendor list</li>
-                    <li>Assessed compliance with IKEA supplier code of conduct</li>
-                </ul>
-
-                <h3>Quality Metrics</h3>
-                <ul>
-                    <li><strong>500+ cameras all passed first-time inspection</strong></li>
-                    <li>Zero rework on control room equipment</li>
-                    <li>95%+ first-time pass rate on POS integration testing</li>
-                </ul>
-
-                <h2>Stakeholder Engagement</h2>
-                <ul>
-                    <li><strong>Stakeholder analysis:</strong> 25+ stakeholders including IKEA regional security director (key player), store manager, IT manager, department heads, contractors, SIRA authority</li>
-                    <li><strong>Communication plan:</strong> Bi-weekly client steering, weekly contractor coordination, daily email updates during installation (30-50 emails/day), SIRA authority engagement for approvals</li>
-                </ul>
-
-                <h2>Outcomes</h2>
-                <ul>
-                    <li><strong>Reduced shrinkage by 35%</strong> (exceeded 30% target)</li>
-                    <li><strong>Enhanced customer experience</strong> with queue management reducing perceived wait times by 25%</li>
-                    <li><strong>Comprehensive security coverage</strong> across all 3 IKEA locations</li>
-                    <li><strong>Successful IKEA internal security audit</strong> providing comprehensive system documentation</li>
-                    <li>Turnkey delivery meeting IKEA global security standards</li>
-                    <li>On-time, within 2% of budget</li>
-                </ul>
+        <section class="card">
+            <h2 class="section-title">My Project Delivery Role</h2>
+            <p class="section-lead">My role covered end-to-end project management from planning and procurement coordination through installation, subcontractor management, commissioning and handover. The focus was to deliver the upgrade without disrupting live retail operations.</p>
+            <div class="grid-3">
+                <div class="mini-card">
+                    <h3>Planning & Site Control</h3>
+                    <ul>
+                        <li>Project planning and delivery sequencing</li>
+                        <li>Site coordination with retail operations</li>
+                        <li>Night and weekend work planning</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>Commercial & Vendor Control</h3>
+                    <ul>
+                        <li>Subcontractor scope coordination</li>
+                        <li>Procurement impact tracking</li>
+                        <li>Delivery cost control support</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>Commissioning & Handover</h3>
+                    <ul>
+                        <li>System testing coordination</li>
+                        <li>Defect resolution follow-up</li>
+                        <li>Operational handover readiness</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <section class="grid-2">
+            <article class="card challenge">
+                <h2 class="section-title">Delivery Challenge</h2>
+                <ul>
+                    <li>Technology upgrade had to be delivered inside a live customer-facing retail environment.</li>
+                    <li>Work windows were restricted to nights and weekends to minimise operational disruption.</li>
+                    <li>Multiple systems had to be coordinated across CCTV, control room, signage, data centre and CEM integration.</li>
+                    <li>MEP contractor interfaces and subcontractor sequencing required close daily coordination.</li>
+                    <li>Compliance expectations had to be maintained while keeping the rollout on schedule.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">My PM Approach</h2>
+                <ul>
+                    <li>Planned delivery around operational constraints and retail trading requirements.</li>
+                    <li>Coordinated subcontractor activities to reduce disruption to customer-facing areas.</li>
+                    <li>Managed procurement coordination and material delivery impacts against the project schedule.</li>
+                    <li>Maintained regular communication with stakeholders, contractors and technical teams.</li>
+                    <li>Controlled delivery risks around access, safety, quality checks and commissioning readiness.</li>
+                    <li>Supported final testing, defect closeout and operational handover.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card outcome">
+            <h2 class="section-title">Outcome</h2>
+            <p>The technology upgrade was delivered successfully within the planned rollout period. The project supported improved customer service centre operations, integrated technology readiness and controlled handover within a flagship retail environment, while maintaining business continuity during delivery.</p>
+        </section>
+
+        <section class="card takeaway">
+            <h2 class="section-title">My Project Delivery Takeaway</h2>
+            <p>This project demonstrates end-to-end project management in a live retail environment, including contractor coordination, procurement impact control, weekend/night delivery planning, multi-system integration, commissioning and handover without disrupting customer-facing operations.</p>
+        </section>
+
+        <nav class="footer-nav" aria-label="Project navigation">
+            <a class="btn secondary" href="../index.html">← Back to Portfolio</a>
+            <a class="btn" href="mailto:kmbasha@gmail.com">Contact Basha</a>
+        </nav>
+    </main>
 </body>
 </html>
