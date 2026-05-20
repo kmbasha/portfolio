@@ -4,62 +4,230 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <title>Higher Colleges of Technology - 18 Campus Program | KM Basha Portfolio</title>
+    <title>HCT Government Education AV Rollout | Mahaboob Basha Portfolio</title>
+    <meta name="description" content="Government education AV rollout across 18 UAE campuses involving classroom AV automation, auditoriums, Crestron control, subcontractor coordination, commissioning and handover.">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #333; background: #f5f5f5; }
-        header { background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%); color: white; padding: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .header-content { max-width: 1200px; margin: 0 auto; }
-        .back-link { display: inline-block; color: white; text-decoration: none; margin-bottom: 1rem; font-size: 0.95rem; opacity: 0.9; }
-        .back-link:hover { opacity: 1; }
-        h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-        .subtitle { font-size: 1.2rem; opacity: 0.95; }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
-        .content-card { background: white; border-radius: 12px; padding: 2.5rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 2rem; }
-        .tag { background: #dbeafe; color: #1e40af; padding: 0.5rem 1rem; border-radius: 6px; font-size: 0.9rem; font-weight: 600; }
-        .project-content { color: #374151; }
-        .project-content h2 { color: #1e3a8a; font-size: 1.6rem; margin: 2rem 0 1rem 0; border-bottom: 2px solid #e5e7eb; padding-bottom: 0.5rem; }
-        .project-content h3 { color: #1e3a8a; font-size: 1.3rem; margin: 1.5rem 0 0.75rem 0; }
-        .project-content strong { color: #1e3a8a; font-weight: 600; }
-        .project-content ul { margin-left: 2rem; margin-top: 0.5rem; }
-        .project-content li { margin: 0.5rem 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.65;
+            color: #1f2937;
+            background: #f4f7fb;
+        }
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
+            color: white;
+            padding: 2.5rem 1.25rem;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
+        }
+        .header-content { max-width: 1120px; margin: 0 auto; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            color: rgba(255,255,255,0.92);
+            text-decoration: none;
+            margin-bottom: 1.25rem;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+        .back-link:hover { color: #ffffff; }
+        h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.03em; }
+        .subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: #dbeafe; max-width: 900px; }
+        .container { max-width: 1120px; margin: 2rem auto 3rem; padding: 0 1.25rem; }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: clamp(1.25rem, 3vw, 2rem);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            margin-bottom: 1.25rem;
+        }
+        .snapshot {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 2;
+        }
+        .snapshot-item {
+            background: #ffffff;
+            border: 1px solid #dbeafe;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
+        }
+        .snapshot-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 0.3rem; }
+        .snapshot-value { font-size: 1rem; color: #0f172a; font-weight: 800; }
+        .section-title { color: #0f172a; font-size: 1.35rem; margin-bottom: 0.9rem; letter-spacing: -0.01em; }
+        .section-lead { color: #475569; margin-bottom: 1rem; max-width: 920px; }
+        .tag-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.1rem; }
+        .tag { background: #e0f2fe; color: #075985; padding: 0.45rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 700; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+        .mini-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1rem; }
+        .mini-card h3 { color: #1e3a8a; font-size: 1rem; margin-bottom: 0.5rem; }
+        ul { padding-left: 1.15rem; margin-top: 0.5rem; }
+        li { margin: 0.4rem 0; padding-left: 0.2rem; }
+        .challenge { border-left: 5px solid #2563eb; }
+        .outcome { border-left: 5px solid #16a34a; }
+        .takeaway {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border: 1px solid #bfdbfe;
+        }
+        .footer-nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 999px;
+            padding: 0.8rem 1rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: #1e3a8a;
+        }
+        .btn.secondary { color: #1e3a8a; background: #dbeafe; }
+        @media (max-width: 900px) {
+            .snapshot { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: -2rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 560px) {
+            header { padding: 2rem 1rem; }
+            .container { padding: 0 1rem; }
+            .snapshot { grid-template-columns: 1fr; }
+            .card { border-radius: 14px; }
+        }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
             <a href="../index.html" class="back-link">← Back to Portfolio</a>
-            <h1>Higher Colleges of Technology - 18 Campus Program</h1>
-            <div class="subtitle">200+ Classrooms Over 4-Year Program</div>
+            <h1>HCT Government Education AV Rollout</h1>
+            <p class="subtitle">Delivery execution for a national multi-campus AV automation rollout across classrooms, auditoriums, amphitheatres and multi-purpose learning spaces.</p>
         </div>
     </header>
-    <div class="container">
-        <div class="content-card">
-            <div class="tags">
-                <span class="tag">Program Management</span> <span class="tag">EVM (CPI 1.06)</span> <span class="tag">Gov Procurement</span> <span class="tag">200+ Classrooms</span> <span class="tag">4-Year Program</span> <span class="tag">MoE Standards</span>
-            </div>
-            <div class="project-content">
-                
-<h2>Project Overview</h2>
-<p>Transformed 200+ smart classrooms across 18 HCT campuses over 4-year program. Coordinated 25-30 resources across 18 locations. Standardized technology platform enabling distance learning connecting 18 campuses.</p>
-<h2>Key Achievements</h2>
-<ul>
-<li><strong>Program CPI 1.06</strong> (under budget through standardization)</li>
-<li><strong>40% reduction in support complexity</strong></li>
-<li>One-touch meeting start reduced setup from 10 minutes to 30 seconds</li>
-<li>90% reduction in IT support calls</li>
-<li>Enabled 500+ inter-campus lectures annually</li>
-</ul>
-<h2>Technical Scope</h2>
-<ul>
-<li>Smart Classrooms (200+ rooms): Crestron/Extron control, interactive whiteboards (SMART Board 75"-86", Promethean), wireless presentation (Barco ClickShare)</li>
-<li>Distance Learning: Video conferencing per campus (Cisco/Polycom), centralized video bridge</li>
-<li>Digital Signage: Campus-wide networks (Scala, Signagelive CMS)</li>
-</ul>
 
+    <main class="container">
+        <section class="snapshot" aria-label="Project snapshot">
+            <div class="snapshot-item">
+                <div class="snapshot-label">Industry</div>
+                <div class="snapshot-value">Government Education</div>
             </div>
-        </div>
-    </div>
+            <div class="snapshot-item">
+                <div class="snapshot-label">Scale</div>
+                <div class="snapshot-value">18 UAE Campuses</div>
+            </div>
+            <div class="snapshot-item">
+                <div class="snapshot-label">Value</div>
+                <div class="snapshot-value">USD 5M+</div>
+            </div>
+            <div class="snapshot-item">
+                <div class="snapshot-label">Duration</div>
+                <div class="snapshot-value">2-Year Rollout</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-lead">The project involved delivery execution for a large-scale government education AV rollout managed from Abu Dhabi HQ, covering campuses across the UAE. The scope included AV automation and classroom technology across more than 200 learning spaces, including classrooms, auditoriums, amphitheatres and multi-purpose rooms.</p>
+            <div class="tag-row">
+                <span class="tag">Multi-Campus Rollout</span>
+                <span class="tag">AV Automation</span>
+                <span class="tag">Crestron Control</span>
+                <span class="tag">Classrooms & Auditoriums</span>
+                <span class="tag">Commissioning & Handover</span>
+            </div>
+        </section>
+
+        <section class="grid-2">
+            <article class="card">
+                <h2 class="section-title">Delivery Environment</h2>
+                <ul>
+                    <li>Government education environment with multiple campus stakeholders.</li>
+                    <li>Central coordination from Abu Dhabi HQ with delivery across UAE regions.</li>
+                    <li>Parallel site delivery streams across classrooms, auditoriums and specialist teaching spaces.</li>
+                    <li>Coordination with subcontractors, technical teams, consultants and client representatives.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">Systems Delivered</h2>
+                <ul>
+                    <li>AV wiring and classroom technology infrastructure.</li>
+                    <li>Crestron control systems for classroom and room automation.</li>
+                    <li>ClearOne DSP, Yamaha amplification and Extron switching.</li>
+                    <li>NEC projectors and Panaboards across learning environments.</li>
+                    <li>Commissioning, testing and staged operational handover.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">My Project Delivery Role</h2>
+            <p class="section-lead">My role focused on delivery execution rather than high-level programme ownership. I managed site delivery activities, subcontractor coordination, installation sequencing and readiness through commissioning and handover.</p>
+            <div class="grid-3">
+                <div class="mini-card">
+                    <h3>Site & Contractor Control</h3>
+                    <ul>
+                        <li>Subcontractor coordination</li>
+                        <li>Installation sequencing</li>
+                        <li>Regional delivery execution</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>Delivery Coordination</h3>
+                    <ul>
+                        <li>Material coordination</li>
+                        <li>Issue resolution</li>
+                        <li>Change handling</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>Handover Readiness</h3>
+                    <ul>
+                        <li>Commissioning coordination</li>
+                        <li>System testing support</li>
+                        <li>Staged handover readiness</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-2">
+            <article class="card challenge">
+                <h2 class="section-title">Delivery Challenge</h2>
+                <p>The project faced delivery complexity due to material delays, product substitutions and the need to keep parallel regional workstreams moving across multiple campuses.</p>
+                <p>These issues had the potential to affect installation sequencing, commissioning timelines and stakeholder expectations across different campus locations.</p>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">PM Approach</h2>
+                <ul>
+                    <li>Reviewed site priorities and delivery dependencies across active locations.</li>
+                    <li>Coordinated with suppliers, subcontractors and technical teams on alternative product options.</li>
+                    <li>Supported re-sequencing of installation activities to reduce schedule impact.</li>
+                    <li>Maintained delivery communication with stakeholders during phased rollout.</li>
+                    <li>Controlled delivery impact around subcontractor scope, material usage and variations.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card outcome">
+            <h2 class="section-title">Outcome</h2>
+            <p>Despite material delays and product substitutions, the project progressed through phased delivery and commissioning across regions. Final acceptance was achieved through controlled testing, staged handovers and coordinated closeout of outstanding delivery items.</p>
+        </section>
+
+        <section class="card takeaway">
+            <h2 class="section-title">Recruiter Takeaway</h2>
+            <p>This project demonstrates hands-on delivery leadership in a complex AV and ICT integration environment involving multi-site coordination, subcontractor management, procurement impact control, commissioning and handover across a government education setting.</p>
+        </section>
+
+        <nav class="footer-nav" aria-label="Project navigation">
+            <a class="btn secondary" href="../index.html">← Back to Portfolio</a>
+            <a class="btn" href="mailto:kmbasha@gmail.com">Contact Basha</a>
+        </nav>
+    </main>
 </body>
 </html>
