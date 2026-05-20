@@ -5,355 +5,566 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-    <title>KM Basha - Senior Project Manager Portfolio</title>
+    <title>Mahaboob Basha | Senior ICT, AV & Electronic Security Project Manager</title>
+    <meta name="description" content="Senior Project Manager specialising in ICT infrastructure, AV integration and electronic security delivery across construction, live operational and enterprise environments.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        :root {
+            --navy: #0f2742;
+            --blue: #1d4ed8;
+            --teal: #0f766e;
+            --slate: #334155;
+            --muted: #64748b;
+            --light: #f8fafc;
+            --border: #e2e8f0;
+            --card: #ffffff;
+            --accent: #dbeafe;
         }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 2rem 1.5rem 2.5rem;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            color: var(--slate);
+            background: var(--light);
+            line-height: 1.55;
         }
 
-        .container {
-            max-width: 1260px;
-            width: 100%;
+        a { color: inherit; }
+
+        .site-shell {
+            max-width: 1180px;
             margin: 0 auto;
+            padding: 0 22px;
         }
 
-        /* ── HERO ── */
-        header {
-            color: white;
-            margin-bottom: 1.75rem;
-            padding: 2rem 2.5rem;
-            background: rgba(255,255,255,0.08);
-            border-radius: 16px;
-            backdrop-filter: blur(6px);
-            border: 1px solid rgba(255,255,255,0.15);
+        .topbar {
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            background: rgba(255,255,255,0.94);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
         }
 
-        .hero-container {
+        .topbar-inner {
+            max-width: 1180px;
+            margin: 0 auto;
+            padding: 14px 22px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 48px;
-            width: 100%;
+            gap: 24px;
         }
 
-        .hero-text {
-            flex: 1;
+        .brand {
+            font-weight: 800;
+            color: var(--navy);
+            letter-spacing: -0.02em;
+            white-space: nowrap;
+        }
+
+        nav {
+            display: flex;
+            gap: 18px;
+            align-items: center;
+            font-size: 0.93rem;
+            color: var(--slate);
+        }
+
+        nav a {
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover { color: var(--blue); }
+
+        .contact-pill {
+            background: var(--blue);
+            color: #fff;
+            padding: 9px 14px;
+            border-radius: 999px;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f2742 0%, #123d66 58%, #0f766e 100%);
+            color: #fff;
+            padding: 54px 0 36px;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) 190px;
+            gap: 42px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            gap: 8px;
+            align-items: center;
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.18);
+            padding: 8px 12px;
+            border-radius: 999px;
+            font-size: 0.9rem;
+            margin-bottom: 18px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.15rem, 5vw, 4.4rem);
+            line-height: 1.02;
+            letter-spacing: -0.055em;
+            margin-bottom: 14px;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.15rem, 2.1vw, 1.55rem);
+            line-height: 1.35;
+            font-weight: 700;
+            color: #dbeafe;
+            margin-bottom: 16px;
             max-width: 850px;
-            text-align: left;
         }
 
-        .hero-image {
-            flex-shrink: 0;
+        .hero p {
+            font-size: 1.05rem;
+            max-width: 850px;
+            color: rgba(255,255,255,0.88);
+            margin-bottom: 24px;
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            padding: 11px 16px;
+            border-radius: 10px;
+            font-weight: 700;
+            text-decoration: none;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary { background: #fff; color: var(--navy); }
+        .btn-secondary { border-color: rgba(255,255,255,0.38); color: #fff; }
+        .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+
+        .hero-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .hero-meta span {
+            background: rgba(255,255,255,0.12);
+            border: 1px solid rgba(255,255,255,0.16);
+            padding: 7px 10px;
+            border-radius: 999px;
         }
 
         .profile-image {
             width: 180px;
             height: 180px;
-            border-radius: 50%;
+            border-radius: 24px;
             object-fit: cover;
-            box-shadow: 0 6px 25px rgba(0,0,0,0.28);
             border: 3px solid rgba(255,255,255,0.35);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.28);
         }
 
-        header h1 {
-            font-size: 2.8rem;
-            margin-bottom: 0.35rem;
-            font-weight: 700;
-            letter-spacing: -1px;
-        }
+        section { padding: 42px 0; }
 
-        header .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.97;
-            margin-bottom: 0.6rem;
-            font-weight: 600;
-        }
-
-        header .description {
-            font-size: 1rem;
-            opacity: 0.9;
-            margin-bottom: 0.75rem;
-            line-height: 1.65;
-        }
-
-        header .domains {
-            font-size: 0.97rem;
-            opacity: 0.92;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        header .credentials {
-            font-size: 0.97rem;
-            opacity: 0.88;
-            margin-bottom: 0.35rem;
-        }
-
-        header .contact {
-            font-size: 0.93rem;
-            opacity: 0.82;
-            margin-top: 0.2rem;
-        }
-
-        header .contact a {
-            color: #d4e3ff;
-            text-decoration: none;
-        }
-
-        header .contact a:hover {
-            text-decoration: underline;
-        }
-
-        /* ── INTRO LINE ── */
-        .portfolio-intro {
-            text-align: center;
-            color: white;
-            font-size: 1.05rem;
-            font-weight: 500;
-            margin: 0 0 1.25rem 0;
-            opacity: 0.95;
-        }
-
-        /* ── PORTFOLIO CARDS ── */
-        .portfolio-selection {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-            gap: 2rem;
-            margin-top: 1rem;
-            margin-bottom: 2rem;
-        }
-
-        .portfolio-card {
-            background: white;
-            border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: inherit;
-            display: block;
-        }
-
-        .portfolio-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 30px 80px rgba(0,0,0,0.4);
-        }
-
-        .portfolio-card h2 {
-            font-size: 1.75rem;
-            color: #1e3a8a;
-            margin-bottom: 0.6rem;
-            line-height: 1.3;
-        }
-
-        .portfolio-card .subtitle {
-            font-size: 1rem;
-            color: #64748b;
-            margin-bottom: 1.25rem;
-        }
-
-        .portfolio-card ul {
-            list-style: none;
-            margin-bottom: 1.25rem;
-        }
-
-        .portfolio-card li {
-            padding: 0.4rem 0;
-            padding-left: 1.5rem;
-            position: relative;
-            color: #475569;
-        }
-
-        .portfolio-card li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #3b82f6;
-            font-weight: bold;
-        }
-
-        .portfolio-card .stats {
+        .section-heading {
             display: flex;
-            justify-content: space-around;
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 2px solid #e5e7eb;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: flex-end;
+            margin-bottom: 22px;
         }
 
-        .portfolio-card .stat {
-            text-align: center;
+        .section-heading h2 {
+            color: var(--navy);
+            font-size: clamp(1.65rem, 3vw, 2.2rem);
+            line-height: 1.15;
+            letter-spacing: -0.03em;
         }
 
-        .portfolio-card .stat-number {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #1e3a8a;
+        .section-heading p {
+            color: var(--muted);
+            max-width: 520px;
+            font-size: 1rem;
         }
 
-        .portfolio-card .stat-label {
-            font-size: 0.9rem;
-            color: #64748b;
-            margin-top: 0.25rem;
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 16px;
         }
 
-        .portfolio-card .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 0.85rem 2.5rem;
-            min-width: 220px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 8px 30px rgba(15, 39, 66, 0.06);
+        }
+
+        .card h3 {
+            color: var(--navy);
             font-size: 1.05rem;
-            margin-top: 1.25rem;
-            transition: opacity 0.3s ease;
+            margin-bottom: 10px;
         }
 
-        .portfolio-card .btn:hover {
-            opacity: 0.9;
+        .card ul {
+            list-style: none;
+            display: grid;
+            gap: 7px;
+            font-size: 0.95rem;
+            color: var(--slate);
         }
 
-        /* ── FOOTER ── */
-        footer {
-            text-align: center;
-            color: white;
-            opacity: 0.88;
-            margin-top: 2rem;
+        .card li::before {
+            content: "•";
+            color: var(--blue);
+            font-weight: 900;
+            margin-right: 8px;
+        }
+
+        .split-band {
+            background: #fff;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .domain-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .domain-card {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 24px;
+            text-decoration: none;
+            display: block;
+            box-shadow: 0 10px 35px rgba(15, 39, 66, 0.07);
+        }
+
+        .domain-card:hover { border-color: #bfdbfe; transform: translateY(-2px); }
+
+        .domain-card .tag {
+            display: inline-block;
+            background: var(--accent);
+            color: #1e40af;
+            font-weight: 800;
+            font-size: 0.82rem;
+            padding: 5px 9px;
+            border-radius: 999px;
+            margin-bottom: 12px;
+        }
+
+        .domain-card h3 {
+            color: var(--navy);
+            font-size: 1.35rem;
+            margin-bottom: 8px;
+        }
+
+        .domain-card p { color: var(--muted); margin-bottom: 15px; }
+
+        .domain-card strong { color: var(--blue); }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 16px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 18px;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(15, 39, 66, 0.06);
+        }
+
+        .project-card:hover { border-color: #bfdbfe; }
+
+        .project-card .type {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--teal);
+            text-transform: uppercase;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+
+        .project-card h3 {
+            color: var(--navy);
+            margin-bottom: 8px;
+            line-height: 1.25;
+        }
+
+        .project-card p {
+            color: var(--muted);
             font-size: 0.95rem;
         }
 
-        /* ── RESPONSIVE ── */
-        @media (max-width: 768px) {
-            .hero-container {
-                flex-direction: column;
-                text-align: center;
-                gap: 24px;
-            }
-
-            .hero-text {
-                text-align: center;
-                max-width: 100%;
-            }
-
-            .profile-image {
-                width: 140px;
-                height: 140px;
-            }
+        .proof-strip {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 12px;
         }
 
-        @media (max-width: 968px) {
-            header h1 {
-                font-size: 2rem;
-            }
-            header .subtitle {
-                font-size: 1.05rem;
-            }
-            .portfolio-selection {
-                grid-template-columns: 1fr;
-            }
-            .portfolio-card {
-                padding: 2rem;
-            }
-            .portfolio-card h2 {
-                font-size: 1.4rem;
-            }
+        .proof-item {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px;
+        }
+
+        .proof-item strong { color: var(--navy); display: block; margin-bottom: 4px; }
+        .proof-item span { color: var(--muted); font-size: 0.93rem; }
+
+        .cta {
+            background: var(--navy);
+            color: #fff;
+            border-radius: 24px;
+            padding: 34px;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .cta h2 { font-size: 1.8rem; margin-bottom: 8px; }
+        .cta p { color: rgba(255,255,255,0.82); }
+        .cta .btn { background: #fff; color: var(--navy); }
+
+        footer {
+            padding: 24px 0 34px;
+            color: var(--muted);
+            text-align: center;
+            font-size: 0.92rem;
+        }
+
+        @media (max-width: 960px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .hero-image { order: -1; }
+            .profile-image { width: 140px; height: 140px; border-radius: 20px; }
+            .card-grid, .project-grid, .proof-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .section-heading { display: block; }
+            .section-heading p { margin-top: 8px; }
+        }
+
+        @media (max-width: 700px) {
+            .topbar-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
+            nav { flex-wrap: wrap; gap: 10px; }
+            .hero { padding-top: 34px; }
+            .domain-grid, .card-grid, .project-grid, .proof-strip { grid-template-columns: 1fr; }
+            .cta { display: block; }
+            .cta .btn { margin-top: 18px; width: 100%; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="hero-container">
-                <div class="hero-text">
-                    <h1>KM BASHA</h1>
-                    <div class="subtitle">Senior Project Manager — AV / ICT &amp; ELV Systems Integration</div>
-                    <div class="description">Portfolio of delivered ICT infrastructure, CCTV, access control, AV, ELV and integrated technology projects across commercial, government, enterprise, healthcare, aviation and banking environments.</div>
-                    <div class="domains">Domain Focus: CCTV | Access Control | AV Systems | ICT Infrastructure | ELV Systems</div>
-                    <div class="credentials">Credentials: PMP | PRINCE2 Practitioner | CISA | Melbourne, VIC</div>
-                    <div class="contact">Contact: <a href="mailto:kmbasha@gmail.com">kmbasha@gmail.com</a> | <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank">linkedin.com/in/mahaboob-b-483b1116</a></div>
+    <header class="topbar">
+        <div class="topbar-inner">
+            <div class="brand">Mahaboob Basha</div>
+            <nav aria-label="Main navigation">
+                <a href="#projects">Project Highlights</a>
+                <a href="elv/index.html">AV &amp; Security</a>
+                <a href="ict/index.html">ICT Infrastructure</a>
+                <a href="#credentials">Credentials</a>
+                <a href="#contact" class="contact-pill">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="site-shell hero-grid">
+                <div>
+                    <div class="eyebrow">Available Immediately · Melbourne · Open to Relocation</div>
+                    <h1>Senior Project Manager for ICT, AV &amp; Electronic Security Integration</h1>
+                    <h2>Hands-on delivery across construction, live operational and enterprise technology environments.</h2>
+                    <p>Experienced coordinating subcontractors, installers, electricians, cabling teams, vendors and client stakeholders from planning and site mobilisation through installation, commissioning and handover.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Project Highlights</a>
+                        <a href="mailto:kmbasha@gmail.com" class="btn btn-secondary">Email Me</a>
+                        <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
+                    </div>
+                    <div class="hero-meta">
+                        <span>PMP</span>
+                        <span>PRINCE2 Practitioner</span>
+                        <span>VIC Security Licence</span>
+                        <span>TITAB Cabler Registration</span>
+                        <span>Australian PR — No Sponsorship Required</span>
+                    </div>
                 </div>
                 <div class="hero-image">
-                    <img src="assets/images/profile.png" alt="KM Basha — Senior Project Manager" class="profile-image" />
+                    <img src="assets/images/profile.png" alt="Mahaboob Basha — Senior ICT, AV and Electronic Security Project Manager" class="profile-image">
                 </div>
             </div>
-        </header>
+        </section>
 
-        <p class="portfolio-intro">Explore selected project portfolios by delivery domain.</p>
+        <section id="capabilities">
+            <div class="site-shell">
+                <div class="section-heading">
+                    <h2>Delivery capability recruiters can scan quickly</h2>
+                    <p>Focused on practical project execution, not long technical reading. Built around the work employers ask for: site delivery, coordination, testing and handover.</p>
+                </div>
+                <div class="card-grid">
+                    <div class="card">
+                        <h3>Site Delivery</h3>
+                        <ul>
+                            <li>Site surveys and mobilisation</li>
+                            <li>Installation sequencing</li>
+                            <li>Construction and live-site coordination</li>
+                            <li>Daily issue resolution</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>AV &amp; Security Integration</h3>
+                        <ul>
+                            <li>CCTV and access control</li>
+                            <li>Control rooms and video walls</li>
+                            <li>Teams/Zoom rooms and corporate AV</li>
+                            <li>Digital signage and automation</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>ICT Infrastructure</h3>
+                        <ul>
+                            <li>Structured copper and fibre cabling</li>
+                            <li>Server rooms and rack readiness</li>
+                            <li>Network and workplace technology</li>
+                            <li>AV over IP readiness</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>Commissioning &amp; Handover</h3>
+                        <ul>
+                            <li>Testing and defect management</li>
+                            <li>UAT and client acceptance</li>
+                            <li>Documentation and O&amp;M handover</li>
+                            <li>BAU transition support</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="portfolio-selection">
-            <a href="ict/index.html" class="portfolio-card">
-                <h2>ICT Infrastructure &amp; Enterprise Systems Projects</h2>
-                <div class="subtitle">Project delivery portfolio — selected systems, programs and outcomes</div>
-                <ul>
-                    <li>Data Centers &amp; Cloud Infrastructure</li>
-                    <li>Enterprise Applications &amp; Integration</li>
-                    <li>Network &amp; Telecommunications</li>
-                    <li>Virtualization &amp; Migration Programs</li>
-                </ul>
-                <div class="stats">
-                    <div class="stat">
-                        <div class="stat-number">17</div>
-                        <div class="stat-label">Major Programs</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">$15M+</div>
-                        <div class="stat-label">Delivered</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">88-90%</div>
-                        <div class="stat-label">On-Time</div>
-                    </div>
+        <section class="split-band">
+            <div class="site-shell">
+                <div class="section-heading">
+                    <h2>Project Delivery Experience Across Two Core Technology Domains</h2>
+                    <p>AV, Electronic Security & Control Systems | ICT Infrastructure & Technology Delivery</p>
                 </div>
-                <div style="text-align: center;">
-                    <span class="btn">View ICT Portfolio →</span>
+                <div class="domain-grid">
+                    <a class="domain-card" href="elv/index.html">
+                        <span class="tag">AV / ELV / Security</span>
+                        <h3>CCTV, Access Control, AV &amp; Building Technology</h3>
+                        <p>Projects covering security systems, AV spaces, video walls, control automation, digital signage and integrated ELV environments.</p>
+                        <strong>View AV &amp; Security Portfolio →</strong>
+                    </a>
+                    <a class="domain-card" href="ict/index.html">
+                        <span class="tag">ICT Infrastructure</span>
+                        <h3>Infrastructure, Connectivity, Server Rooms &amp; Enterprise Systems</h3>
+                        <p>Projects covering structured cabling, network readiness, data centres, workplace technology, cloud and enterprise infrastructure delivery.</p>
+                        <strong>View ICT Infrastructure Portfolio →</strong>
+                    </a>
                 </div>
-            </a>
+            </div>
+        </section>
 
-            <a href="elv/index.html" class="portfolio-card">
-                <h2>CCTV, Access Control &amp; AV Systems Projects</h2>
-                <div class="subtitle">Project delivery portfolio — selected systems, programs and outcomes</div>
-                <ul>
-                    <li>Physical Security &amp; Surveillance</li>
-                    <li>AV &amp; Control Automation</li>
-                    <li>Building Automation &amp; Smart Systems</li>
-                    <li>Integrated Building Technology</li>
-                </ul>
-                <div class="stats">
-                    <div class="stat">
-                        <div class="stat-number">13</div>
-                        <div class="stat-label">Major Programs</div>
+        <section id="projects">
+            <div class="site-shell">
+                <div class="section-heading">
+                    <h2>Selected project highlights</h2>
+                    <p>Project examples selected for delivery complexity, multi-site coordination and relevance to Australian ICT / AV / security integration roles.</p>
+                </div>
+                <div class="project-grid">
+                    <a href="elv/projects/hct.html" class="project-card">
+                        <div class="type">Government Education · AV Rollout</div>
+                        <h3>HCT Campus AV Automation</h3>
+                        <p>Multi-campus classroom, auditorium and distance-learning AV delivery managed across UAE sites from Abu Dhabi HQ.</p>
+                    </a>
+                    <a href="elv/projects/ikea.html" class="project-card">
+                        <div class="type">Retail · Live Environment</div>
+                        <h3>IKEA Integrated Technology Delivery</h3>
+                        <p>Site-based coordination across CCTV, control room, structured cabling, digital signage and operational technology works.</p>
+                    </a>
+                    <a href="elv/projects/qmatic-cem.html" class="project-card">
+                        <div class="type">Customer Experience · Multi-Site</div>
+                        <h3>Qmatic / CEM Service Centre Systems</h3>
+                        <p>Queue management and customer experience platform delivery with structured site rollout and handover requirements.</p>
+                    </a>
+                    <a href="ict/projects/datacenter.html" class="project-card">
+                        <div class="type">ICT Infrastructure · Critical Environment</div>
+                        <h3>Data Centre &amp; Server Room Delivery</h3>
+                        <p>Infrastructure delivery involving cabling, racks, power, cooling coordination and operational readiness.</p>
+                    </a>
+                    <a href="elv/projects/healthcare.html" class="project-card">
+                        <div class="type">Healthcare · Operational Sites</div>
+                        <h3>Healthcare Technology Systems</h3>
+                        <p>Delivery of cabling, security and operational systems in healthcare environments requiring careful stakeholder coordination.</p>
+                    </a>
+                    <a href="elv/projects/corporate-av.html" class="project-card">
+                        <div class="type">Workplace Technology · AV</div>
+                        <h3>Corporate AV &amp; Collaboration Spaces</h3>
+                        <p>Meeting rooms, conferencing environments and integrated AV systems delivered through installation, testing and handover.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="credentials" class="split-band">
+            <div class="site-shell">
+                <div class="section-heading">
+                    <h2>Credential and local employability signals</h2>
+                    <p>Australian work rights and role-relevant certifications for project delivery, security systems and cabling environments.</p>
+                </div>
+                <div class="proof-strip">
+                    <div class="proof-item"><strong>PMP Certified</strong><span>Project delivery discipline and governance.</span></div>
+                    <div class="proof-item"><strong>PRINCE2 Practitioner</strong><span>Structured project management approach.</span></div>
+                    <div class="proof-item"><strong>VIC Security Licence</strong><span>CCTV and access control relevance.</span></div>
+                    <div class="proof-item"><strong>TITAB Registered Cabler</strong><span>Copper, coaxial and fibre cabling credibility.</span></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="site-shell">
+                <div class="cta">
+                    <div>
+                        <h2>Open to Project Manager roles across Australia</h2>
+                        <p>Available immediately for ICT infrastructure, AV integration, electronic security, workplace technology and operational deployment roles.</p>
                     </div>
-                    <div class="stat">
-                        <div class="stat-number">$12M+</div>
-                        <div class="stat-label">Delivered</div>
-                    </div>
-                    <div class="stat">
-                        <div class="stat-number">95%+</div>
-                        <div class="stat-label">Client Satisfaction</div>
+                    <div>
+                        <a href="mailto:kmbasha@gmail.com" class="btn">Contact Basha</a>
                     </div>
                 </div>
-                <div style="text-align: center;">
-                    <span class="btn">View ELV Portfolio →</span>
-                </div>
-            </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="site-shell">
+            <p>Mahaboob Basha · Melbourne, VIC · 0493 274 148 · <a href="mailto:kmbasha@gmail.com">kmbasha@gmail.com</a></p>
         </div>
-
-        <footer>
-            <p>A growing portfolio of ICT, AV, ELV, CCTV, access control and integrated technology projects delivered across multiple industries.</p>
-        </footer>
-    </div>
+    </footer>
 </body>
 </html>
