@@ -335,6 +335,10 @@
             gap: 12px;
         }
 
+        .proof-strip-five {
+            grid-template-columns: repeat(5, minmax(0, 1fr));
+        }
+
         .proof-item {
             background: #fff;
             border: 1px solid var(--border);
@@ -359,6 +363,8 @@
         .cta h2 { font-size: 1.8rem; margin-bottom: 8px; }
         .cta p { color: rgba(255,255,255,0.82); }
         .cta .btn { background: #fff; color: var(--navy); }
+        .cta .btn + .btn { margin-left: 10px; }
+        .cta .cta-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.45); }
 
         footer {
             padding: 24px 0 34px;
@@ -371,7 +377,7 @@
             .hero-grid { grid-template-columns: 1fr; }
             .hero-image { order: -1; }
             .profile-image { width: 140px; height: 140px; border-radius: 20px; }
-            .card-grid, .project-grid, .proof-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .card-grid, .project-grid, .proof-strip, .proof-strip-five { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .section-heading { display: block; }
             .section-heading p { margin-top: 8px; }
         }
@@ -380,9 +386,10 @@
             .topbar-inner { align-items: flex-start; flex-direction: column; gap: 12px; }
             nav { flex-wrap: wrap; gap: 10px; }
             .hero { padding-top: 34px; }
-            .domain-grid, .card-grid, .project-grid, .proof-strip { grid-template-columns: 1fr; }
+            .domain-grid, .card-grid, .project-grid, .proof-strip, .proof-strip-five { grid-template-columns: 1fr; }
             .cta { display: block; }
             .cta .btn { margin-top: 18px; width: 100%; }
+            .cta .btn + .btn { margin-left: 0; margin-top: 10px; }
         }
     </style>
 </head>
@@ -406,16 +413,17 @@
                 <div>
                     <div class="eyebrow">Available Immediately · Melbourne · Open to Relocation</div>
                     <h1>Senior Project Manager for ICT, AV &amp; Electronic Security Integration</h1>
-                    <h2>Hands-on delivery across construction, live operational and enterprise technology environments.</h2>
-                    <p>Experienced coordinating subcontractors, installers, electricians, cabling teams, vendors and client stakeholders from planning and site mobilisation through installation, commissioning and handover.</p>
+                    <h2>Hands-on delivery across construction fit-outs, live operational and enterprise technology environments.</h2>
+                    <p>Experienced coordinating subcontractors, installers, electricians, cabling teams, vendors and client stakeholders across fit-out, campus, workplace and critical technology environments — from planning and site mobilisation through installation, commissioning and handover.</p>
                     <div class="hero-actions">
                         <a href="#projects" class="btn btn-primary">View Project Highlights</a>
-                        <a href="mailto:kmbasha@gmail.com" class="btn btn-secondary">Email Me</a>
+                        <a href="mailto:kmbasha@gmail.com" class="btn btn-secondary">Contact Basha</a>
                         <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank" rel="noopener" class="btn btn-secondary">LinkedIn</a>
                     </div>
                     <div class="hero-meta">
                         <span>PMP</span>
                         <span>PRINCE2 Practitioner</span>
+                        <span>CISA Certified</span>
                         <span>VIC Security Licence</span>
                         <span>TITAB Cabler Registration</span>
                         <span>Australian PR — No Sponsorship Required</span>
@@ -450,8 +458,10 @@
                         <ul>
                             <li>CCTV and access control</li>
                             <li>Control rooms, command centres and video walls</li>
+                            <li>Auditoriums, amphitheatres and classroom AV</li>
                             <li>Teams/Zoom rooms and corporate AV</li>
                             <li>Digital signage and automation</li>
+                            <li>Crestron automation understanding: design, workflow, approvals, Fusion and XiO Cloud</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -459,7 +469,8 @@
                         <ul>
                             <li>Structured copper and fibre cabling</li>
                             <li>Server rooms and rack readiness</li>
-                            <li>UC rollouts, M365, IVR and CRM integrations</li>
+                            <li>Tier 2 and Tier 3 data centre environments</li>
+                            <li>UC rollouts, IVR and CRM integrations</li>
                             <li>AV over IP readiness</li>
                         </ul>
                     </div>
@@ -480,19 +491,19 @@
             <div class="site-shell">
                 <div class="section-heading">
                     <h2>Project Delivery Experience Across Two Core Technology Domains</h2>
-                    <p>AV, Electronic Security, Video Walls & Command Centres | ICT Infrastructure, UC & Enterprise Technology Delivery</p>
+                    <p>AV, Electronic Security, Video Walls, Digital Signage &amp; Command Centres | ICT Infrastructure, Data Centres, UC &amp; Enterprise Technology Delivery</p>
                 </div>
                 <div class="domain-grid">
                     <a class="domain-card" href="elv/index.html">
                         <span class="tag">AV / ELV / Security</span>
-                        <h3>CCTV, Access Control, AV, Video Walls &amp; Command Centres</h3>
-                        <p>Projects covering security systems, AV spaces, video walls, control rooms, command and control centres, automation, digital signage and integrated ELV environments.</p>
+                        <h3>CCTV, Access Control, AV, Video Walls, Digital Signage &amp; Command Centres</h3>
+                        <p>Projects covering security systems, AV spaces, auditoriums, amphitheatres, classrooms, video walls, control rooms, command and control centres, automation, digital signage and integrated ELV environments.</p>
                         <strong>View AV &amp; Security Portfolio →</strong>
                     </a>
                     <a class="domain-card" href="ict/index.html">
                         <span class="tag">ICT Infrastructure</span>
-                        <h3>ICT Infrastructure, UC Rollouts, M365, IVR &amp; CRM Integrations</h3>
-                        <p>Projects covering structured cabling, network readiness, data centres, workplace technology, UC rollouts, Microsoft 365 integrations, IVR and CRM-linked communication environments.</p>
+                        <h3>ICT Infrastructure, Datacentres, UC Rollouts, IVR &amp; CRM Integrations</h3>
+                        <p>Projects covering structured cabling, network readiness, Tier 2 and Tier 3 data centre environments, workplace technology fit-outs, UC rollouts, IVR and CRM-linked communication environments.</p>
                         <strong>View ICT Infrastructure Portfolio →</strong>
                     </a>
                 </div>
@@ -546,9 +557,10 @@
                     <h2>Professional Credentials and Delivery Readiness</h2>
                     <p>Role-relevant certifications, Australian work rights and licences supporting ICT, AV and electronic security project delivery.</p>
                 </div>
-                <div class="proof-strip">
+                <div class="proof-strip proof-strip-five">
                     <div class="proof-item"><strong>PMP Certified</strong><span>Project delivery discipline and governance.</span></div>
                     <div class="proof-item"><strong>PRINCE2 Practitioner</strong><span>Structured project management approach.</span></div>
+                    <div class="proof-item"><strong>CISA Certified</strong><span>Information systems audit and governance awareness.</span></div>
                     <div class="proof-item"><strong>VIC Security Licence</strong><span>CCTV and access control relevance.</span></div>
                     <div class="proof-item"><strong>TITAB Registered Cabler</strong><span>Copper, coaxial and fibre cabling credibility.</span></div>
                 </div>
@@ -563,7 +575,8 @@
                         <p>Available immediately for ICT infrastructure, AV integration, electronic security, workplace technology and operational deployment roles.</p>
                     </div>
                     <div>
-                        <a href="mailto:kmbasha@gmail.com" class="btn">Contact Basha</a>
+                        <a href="mailto:kmbasha@gmail.com" class="btn">Contact Basha →</a>
+                        <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank" rel="noopener" class="btn cta-secondary">LinkedIn</a>
                     </div>
                 </div>
             </div>
