@@ -161,16 +161,17 @@
         .hero-meta {
             display: flex;
             flex-wrap: wrap;
-            gap: 10px;
-            font-size: 0.92rem;
+            gap: 8px;
+            font-size: 0.88rem;
             color: rgba(255,255,255,0.9);
         }
 
         .hero-meta span {
             background: rgba(255,255,255,0.12);
             border: 1px solid rgba(255,255,255,0.16);
-            padding: 7px 10px;
+            padding: 6px 9px;
             border-radius: 999px;
+            white-space: nowrap;
         }
 
         .profile-image {
@@ -217,6 +218,7 @@
             border-radius: 18px;
             padding: 20px;
             box-shadow: 0 8px 30px rgba(15, 39, 66, 0.06);
+            min-height: 255px;
         }
 
         .card h3 {
@@ -362,9 +364,17 @@
 
         .cta h2 { font-size: 1.8rem; margin-bottom: 8px; }
         .cta p { color: rgba(255,255,255,0.82); }
-        .cta .btn { background: #fff; color: var(--navy); }
-        .cta .btn + .btn { margin-left: 10px; }
+        .cta-actions {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            min-width: 270px;
+        }
+        .cta .btn { background: #fff; color: var(--navy); min-width: 145px; }
         .cta .cta-secondary { background: transparent; color: #fff; border-color: rgba(255,255,255,0.45); }
+        .cta .cta-secondary:hover { background: rgba(255,255,255,0.1); }
 
         footer {
             padding: 24px 0 34px;
@@ -388,8 +398,8 @@
             .hero { padding-top: 34px; }
             .domain-grid, .card-grid, .project-grid, .proof-strip, .proof-strip-five { grid-template-columns: 1fr; }
             .cta { display: block; }
-            .cta .btn { margin-top: 18px; width: 100%; }
-            .cta .btn + .btn { margin-left: 0; margin-top: 10px; }
+            .cta-actions { margin-top: 18px; min-width: 0; justify-content: stretch; }
+            .cta .btn { width: 100%; }
         }
     </style>
 </head>
@@ -426,7 +436,7 @@
                         <span>CISA Certified</span>
                         <span>VIC Security Licence</span>
                         <span>TITAB Cabler Registration</span>
-                        <span>Australian PR — No Sponsorship Required</span>
+                        <span>Australian PR — No Sponsorship</span>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -438,8 +448,8 @@
         <section id="capabilities">
             <div class="site-shell">
                 <div class="section-heading">
-                    <h2>Delivery capability recruiters can scan quickly</h2>
-                    <p>Focused on practical project execution, not long technical reading. Built around the work employers ask for: site delivery, coordination, testing and handover.</p>
+                    <h2>Project Delivery Capability</h2>
+                    <p>Practical delivery experience across site mobilisation, installation coordination, ICT infrastructure, AV environments, electronic security systems, commissioning and handover.</p>
                 </div>
                 <div class="card-grid">
                     <div class="card">
@@ -449,29 +459,27 @@
                             <li>Installation sequencing</li>
                             <li>Subcontractor and trade coordination</li>
                             <li>Procurement and delivery tracking</li>
-                            <li>Budget and vendor control</li>
-                            <li>Construction and live-site coordination</li>
+                            <li>Budget, vendor and live-site control</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3>AV &amp; Security Integration</h3>
                         <ul>
-                            <li>CCTV and access control</li>
-                            <li>Control rooms, command centres and video walls</li>
+                            <li>CCTV, access control, intercoms, barriers and bollards</li>
+                            <li>ELV rooms, control centres and video walls</li>
                             <li>Auditoriums, amphitheatres and classroom AV</li>
-                            <li>Teams/Zoom rooms and corporate AV</li>
-                            <li>Digital signage and automation</li>
-                            <li>Crestron automation understanding: design, workflow, approvals, Fusion and XiO Cloud</li>
+                            <li>Digital signage, queue management and integration</li>
+                            <li>Crestron design coordination, workflow, approvals, Fusion and XiO Cloud</li>
                         </ul>
                     </div>
                     <div class="card">
                         <h3>ICT Infrastructure</h3>
                         <ul>
-                            <li>Structured copper and fibre cabling</li>
-                            <li>Server rooms and rack readiness</li>
                             <li>Tier 2 and Tier 3 data centre environments</li>
+                            <li>Electrical, cooling, UPS and rack coordination</li>
+                            <li>Data centre cabling and environmental monitoring</li>
+                            <li>Access control, CCTV and operational readiness</li>
                             <li>UC rollouts, IVR and CRM integrations</li>
-                            <li>AV over IP readiness</li>
                         </ul>
                     </div>
                     <div class="card">
@@ -491,19 +499,19 @@
             <div class="site-shell">
                 <div class="section-heading">
                     <h2>Project Delivery Experience Across Two Core Technology Domains</h2>
-                    <p>AV, Electronic Security, Video Walls, Digital Signage &amp; Command Centres | ICT Infrastructure, Data Centres, UC &amp; Enterprise Technology Delivery</p>
+                    <p>Delivery experience across AV, electronic security, workplace fit-outs, data centres, UC and enterprise technology environments.</p>
                 </div>
                 <div class="domain-grid">
                     <a class="domain-card" href="elv/index.html">
                         <span class="tag">AV / ELV / Security</span>
                         <h3>CCTV, Access Control, AV, Video Walls, Digital Signage &amp; Command Centres</h3>
-                        <p>Projects covering security systems, AV spaces, auditoriums, amphitheatres, classrooms, video walls, control rooms, command and control centres, automation, digital signage and integrated ELV environments.</p>
+                        <p>Projects covering security systems, AV spaces, auditoriums, amphitheatres, classrooms, ELV rooms, control centres, video walls, digital signage, queue management and integrated ELV environments.</p>
                         <strong>View AV &amp; Security Portfolio →</strong>
                     </a>
                     <a class="domain-card" href="ict/index.html">
                         <span class="tag">ICT Infrastructure</span>
                         <h3>ICT Infrastructure, Datacentres, UC Rollouts, IVR &amp; CRM Integrations</h3>
-                        <p>Projects covering structured cabling, network readiness, Tier 2 and Tier 3 data centre environments, workplace technology fit-outs, UC rollouts, IVR and CRM-linked communication environments.</p>
+                        <p>Projects covering structured cabling, network readiness, Tier 2 and Tier 3 data centre environments, electrical and cooling coordination, UPS, racks, environmental monitoring, UC rollouts, IVR and CRM-linked communication environments.</p>
                         <strong>View ICT Infrastructure Portfolio →</strong>
                     </a>
                 </div>
@@ -514,7 +522,7 @@
             <div class="site-shell">
                 <div class="section-heading">
                     <h2>Selected project highlights</h2>
-                    <p>Project examples selected for delivery complexity, multi-site coordination and relevance to Australian ICT / AV / security integration roles.</p>
+                    <p>Selected examples showing site coordination, multi-system delivery and handover across AV, ICT and electronic security environments.</p>
                 </div>
                 <div class="project-grid">
                     <a href="elv/projects/hct.html" class="project-card">
@@ -561,7 +569,7 @@
                     <div class="proof-item"><strong>PMP Certified</strong><span>Project delivery discipline and governance.</span></div>
                     <div class="proof-item"><strong>PRINCE2 Practitioner</strong><span>Structured project management approach.</span></div>
                     <div class="proof-item"><strong>CISA Certified</strong><span>Information systems audit and governance awareness.</span></div>
-                    <div class="proof-item"><strong>VIC Security Licence</strong><span>CCTV and access control relevance.</span></div>
+                    <div class="proof-item"><strong>VIC Security Licence</strong><span>Licensed security systems delivery background.</span></div>
                     <div class="proof-item"><strong>TITAB Registered Cabler</strong><span>Copper, coaxial and fibre cabling credibility.</span></div>
                 </div>
             </div>
@@ -571,12 +579,12 @@
             <div class="site-shell">
                 <div class="cta">
                     <div>
-                        <h2>Open to Project Manager roles across Australia</h2>
-                        <p>Available immediately for ICT infrastructure, AV integration, electronic security, workplace technology and operational deployment roles.</p>
+                        <h2>Available for Project Manager roles across Australia</h2>
+                        <p>ICT infrastructure, AV integration, electronic security, workplace technology and operational deployment roles.</p>
                     </div>
-                    <div>
-                        <a href="mailto:kmbasha@gmail.com" class="btn">Contact Basha →</a>
-                        <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank" rel="noopener" class="btn cta-secondary">LinkedIn</a>
+                    <div class="cta-actions" aria-label="Contact actions">
+                        <a href="mailto:kmbasha@gmail.com" class="btn">Contact Basha</a>
+                        <a href="https://linkedin.com/in/mahaboob-b-483b1116" target="_blank" rel="noopener" class="btn cta-secondary">View LinkedIn</a>
                     </div>
                 </div>
             </div>
