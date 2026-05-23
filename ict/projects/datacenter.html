@@ -1,375 +1,270 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-    <title>Enterprise Data Center Tier 3 & 4 Facilities | KM Basha Portfolio</title>
+    <title>Enterprise Data Centre Infrastructure Delivery | Mahaboob Basha Portfolio</title>
+    <meta name="description" content="Tier 2 and Tier 3 data centre builds and critical server room relocations across banking, manufacturing, healthcare and enterprise environments.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.8;
-            color: #333;
-            background: #f5f5f5;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.65;
+            color: #1f2937;
+            background: #f4f7fb;
         }
-
         header {
-            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 55%, #2563eb 100%);
             color: white;
-            padding: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 2.5rem 1.25rem;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18);
         }
-
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        .header-content { max-width: 1120px; margin: 0 auto; }
         .back-link {
-            display: inline-block;
-            color: white;
+            display: inline-flex;
+            align-items: center;
+            color: rgba(255,255,255,0.92);
             text-decoration: none;
-            margin-bottom: 1rem;
+            margin-bottom: 1.25rem;
             font-size: 0.95rem;
-            opacity: 0.9;
-            transition: opacity 0.3s ease;
-        }
-
-        .back-link:hover {
-            opacity: 1;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.95;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-
-        .content-card {
-            background: white;
-            border-radius: 12px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-
-        .tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            margin-bottom: 2rem;
-        }
-
-        .tag {
-            background: #dbeafe;
-            color: #1e40af;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-size: 0.9rem;
             font-weight: 600;
         }
-
-        .project-content {
-            color: #374151;
+        .back-link:hover { color: #ffffff; }
+        h1 { font-size: clamp(2rem, 4vw, 3.2rem); line-height: 1.1; margin-bottom: 0.75rem; letter-spacing: -0.03em; }
+        .subtitle { font-size: clamp(1rem, 2vw, 1.25rem); color: #dbeafe; max-width: 900px; }
+        .container { max-width: 1120px; margin: 2rem auto 3rem; padding: 0 1.25rem; }
+        .card {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            padding: clamp(1.25rem, 3vw, 2rem);
+            box-shadow: 0 15px 35px rgba(15, 23, 42, 0.08);
+            margin-bottom: 1.25rem;
         }
-
-        .project-content h2 {
-            color: #1e3a8a;
-            font-size: 1.6rem;
-            margin: 2rem 0 1rem 0;
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 0.5rem;
+        .snapshot {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: 0.9rem;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 2;
         }
-
-        .project-content h3 {
-            color: #1e3a8a;
-            font-size: 1.3rem;
-            margin: 1.5rem 0 0.75rem 0;
+        .snapshot-item {
+            background: #ffffff;
+            border: 1px solid #dbeafe;
+            border-radius: 16px;
+            padding: 1rem;
+            box-shadow: 0 12px 28px rgba(15, 23, 42, 0.08);
         }
-
-        .project-content strong {
-            color: #1e3a8a;
-            font-weight: 600;
+        .snapshot-label { font-size: 0.78rem; color: #64748b; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 800; margin-bottom: 0.3rem; }
+        .snapshot-value { font-size: 1rem; color: #0f172a; font-weight: 800; line-height: 1.35; }
+        .section-title { color: #0f172a; font-size: 1.35rem; margin-bottom: 0.9rem; letter-spacing: -0.01em; }
+        .section-lead { color: #475569; margin-bottom: 1rem; max-width: 920px; }
+        .tag-row { display: flex; flex-wrap: wrap; gap: 0.55rem; margin-top: 1.1rem; }
+        .tag { background: #e0f2fe; color: #075985; padding: 0.45rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 700; }
+        .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+        .mini-card { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 14px; padding: 1rem; }
+        .mini-card h3 { color: #1e3a8a; font-size: 1rem; margin-bottom: 0.5rem; }
+        ul { padding-left: 1.15rem; margin-top: 0.5rem; }
+        li { margin: 0.4rem 0; padding-left: 0.2rem; }
+        .challenge { border-left: 5px solid #2563eb; }
+        .outcome { border-left: 5px solid #16a34a; }
+        .takeaway {
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border: 1px solid #bfdbfe;
         }
-
-        .project-content ul {
-            margin-left: 2rem;
-            margin-top: 0.5rem;
+        .footer-nav { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; margin-top: 1.5rem; }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            border-radius: 999px;
+            padding: 0.8rem 1rem;
+            font-weight: 800;
+            color: #ffffff;
+            background: #1e3a8a;
         }
-
-        .project-content li {
-            margin: 0.5rem 0;
+        .btn.secondary { color: #1e3a8a; background: #dbeafe; }
+        @media (max-width: 900px) {
+            .snapshot { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: -2rem; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
         }
-
-        .project-content em {
-            color: #1e3a8a;
-            font-style: normal;
-            font-weight: 600;
-            display: block;
-            margin-top: 1rem;
-        }
-
-        @media (max-width: 768px) {
-            h1 {
-                font-size: 1.6rem;
-            }
-            .subtitle {
-                font-size: 1rem;
-            }
-            .content-card {
-                padding: 1.5rem;
-            }
+        @media (max-width: 560px) {
+            header { padding: 2rem 1rem; }
+            .container { padding: 0 1rem; }
+            .snapshot { grid-template-columns: 1fr; }
+            .card { border-radius: 14px; }
         }
     </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <a href="../index.html" class="back-link">← Back to Portfolio</a>
-            <h1>Enterprise Data Center Tier 3 & 4 Facilities</h1>
-            <div class="subtitle">7 Facilities: 2 Tier 4 + 5 Tier 3 | EL Nilein Bank, Central Bank UAE, Pivot Engineering, ANABEEB, Abu Dhabi Mall</div>
+            <a href="../../index.html" class="back-link">← Back to Portfolio</a>
+            <h1>Enterprise Data Centre Infrastructure Delivery</h1>
+            <p class="subtitle">Tier 2 and Tier 3 data centre builds and critical server room relocations across banking, manufacturing, healthcare and enterprise environments.</p>
         </div>
     </header>
 
-    <div class="container">
-        <div class="content-card">
-            <div class="tags">
-                <span class="tag">PMP Certified</span> <span class="tag">EVM (CPI 1.02-1.05)</span> <span class="tag">Banking Compliance</span> <span class="tag">Central Bank Audits</span> <span class="tag">Uptime Tier 4</span> <span class="tag">MS Project</span> <span class="tag">AutoCAD</span>
+    <main class="container">
+        <section class="snapshot" aria-label="Project snapshot">
+            <div class="snapshot-item">
+                <div class="snapshot-label">Delivery Type</div>
+                <div class="snapshot-value">New Builds + Relocations</div>
             </div>
-            
-            <div class="project-content">
-                
-<h2>Project Overview</h2>
-<p>Delivered 2 Tier 4 (99.995% uptime) and 5 Tier 3 (99.982% uptime) data centers for banking and corporate clients across UAE. Managed multi-disciplinary teams of 20-35 resources per project including MEP consultants, Uptime Institute certified specialists, main contractors, and 8-12 specialized sub-contractors.</p>
-
-<h2>Key Achievements</h2>
-<ul>
-    <li><strong>Achieved Uptime Institute Tier 4 certification</strong> - Elite 2-3% of global data centers</li>
-    <li><strong>100% banking regulatory compliance</strong> - Central Bank UAE technology standards</li>
-    <li><strong>Zero critical safety incidents</strong> - Across 100,000+ man-hours</li>
-    <li><strong>Earned Value Management:</strong> CPI 1.02-1.05, SPI 0.98-1.02</li>
-    <li><strong>Successfully supported 2 Central Bank audits</strong> - Zero findings</li>
-</ul>
-
-<h2>Team & Resource Management</h2>
-<p>Managed multi-disciplinary teams of 20-35 resources per project including:</p>
-<ul>
-    <li>MEP consultants</li>
-    <li>Data center specialists (Uptime Institute certified)</li>
-    <li>Main contractor teams</li>
-    <li>8-12 specialized sub-contractors</li>
-</ul>
-<p>Conducted performance reviews and mentored 2 junior project engineers on technical coordination and stakeholder management.</p>
-
-<h2>Project Management Approach</h2>
-
-<h3>PM Methodology & Framework</h3>
-<ul>
-    <li><strong>Waterfall methodology</strong> selected due to regulatory requirements, infrastructure dependencies, and banking compliance needs requiring sequential phase approvals</li>
-    <li><strong>Aligned with PMI/PMBOK standards</strong> across all five process groups: Initiation (charter, stakeholder identification), Planning (comprehensive project plans), Executing (coordinated construction), Monitoring & Controlling (EVM, variance analysis), Closing (lessons learned, handover)</li>
-    <li>Structured approach essential for achieving Uptime Institute Tier 4 certification requiring rigorous documentation and phase validation</li>
-</ul>
-
-<h3>Procurement & Contract Management</h3>
-<ul>
-    <li>Developed comprehensive RFP/RFQ documentation defining technical specifications (Tier 3/4 requirements), commercial terms, qualification criteria, evaluation methodology</li>
-    <li><strong>Evaluated 8-12 contractor bids</strong> using weighted scoring matrix: Technical capability (60%), Commercial proposal (25%), Experience & references (15%)</li>
-    <li>Negotiated fixed-price contracts with milestone-based payments (10-15 milestones per project), 10% retention held until defect liability period completion, performance bonds (10% contract value)</li>
-    <li>Managed contract variations through formal change control: 15-25 change orders per project, each with detailed cost/schedule impact analysis and client approval</li>
-    <li>Vendor compliance verification: Insurance certificates (professional indemnity, public liability), DEWA contractor licenses, safety certifications, quality management system certifications (ISO 9001 where applicable)</li>
-</ul>
-
-<h3>Earned Value Management & Performance Measurement</h3>
-<ul>
-    <li>Implemented Earned Value Management for all projects >$1.5M tracking project performance against baseline</li>
-    <li><strong>Cost Performance Index (CPI): 1.02-1.05</strong> across all projects indicating under-budget performance (every $1.00 spent delivered $1.02-$1.05 of value)</li>
-    <li><strong>Schedule Performance Index (SPI): 0.98-1.02</strong> indicating on-schedule or minor acceptable variance</li>
-    <li><strong>Estimate at Completion (EAC):</strong> Monthly forecast showed final cost within 3-5% of baseline budget across all 7 facilities</li>
-    <li>Tracked Planned Value (PV), Earned Value (EV), Actual Cost (AC) weekly providing early warning of budget/schedule risks</li>
-</ul>
-
-<h3>Stakeholder Engagement & Communication Management</h3>
-<ul>
-    <li>Conducted comprehensive stakeholder analysis identifying <strong>30-40 stakeholders per project</strong> across client executives (CIO, CFO, VP Operations), department heads (IT, Facilities, Security), consultants (MEP, data center specialist, structural), contractors (8-12 specialized), vendors (Dell, HP, Cisco, EMC, Eaton, Trane), authorities (DEWA, Civil Defense, Central Bank inspectors)</li>
-    <li><strong>Power/Interest Matrix categorization:</strong> Key Players (client executives, Central Bank inspectors - high power/high interest), Keep Satisfied (DEWA, consultants - high power/lower interest), Keep Informed (department heads - lower power/high interest), Monitor (sub-contractors - lower power/interest)</li>
-    <li>Developed Communication Management Plan specifying stakeholder-specific protocols: Steering Committee (monthly executive presentations), Project Board (weekly tactical meetings), Contractor coordination (daily toolbox meetings), Client departments (bi-weekly progress updates), Authorities (as-needed for approvals/inspections)</li>
-    <li>Email communication volume: <strong>25-50 emails/day</strong> during active phases coordinating across all stakeholder groups</li>
-</ul>
-
-<h3>Quality Management</h3>
-<ul>
-    <li>Developed comprehensive Quality Management Plan defining quality standards (Uptime Institute Tier 3/4, TIA-942, manufacturer specifications), acceptance criteria, inspection schedules, roles/responsibilities</li>
-    <li><strong>Quality Assurance (QA):</strong> Process audits ensuring contractor adherence to approved procedures, document reviews verifying completeness, compliance checks against specifications</li>
-    <li><strong>Quality Control (QC):</strong> Physical inspections at quality hold points (raised floor grid, electrical rough-in, cable termination, equipment installation), testing and commissioning, as-built verification</li>
-    <li>Established quality hold points: <strong>15-20 per project</strong> preventing work progression until inspection and approval</li>
-    <li>Tracked quality metrics: Defect density (defects per 100 inspections), rework percentage (target <5%), first-time pass rate (target >90%), non-conformance trends</li>
-</ul>
-
-<h3>Project Governance Structure</h3>
-<ul>
-    <li><strong>Steering Committee:</strong> Monthly executive oversight with client CIO, CFO, VP-level, PM presenting. Decision authority for budget changes >5%, scope changes, major risk escalations</li>
-    <li><strong>Project Board:</strong> Weekly tactical decision-making with client project manager, consultant lead, main contractor manager, PM chairing. Authority for operational decisions, minor scope clarifications, contractor coordination issues</li>
-    <li><strong>Change Control Board:</strong> Bi-weekly evaluation of change requests. Assessed changes for technical impact, cost, schedule, risk</li>
-    <li><strong>Decision Authority Matrix:</strong> PM authority (operational decisions, <$10K changes), Project Board (tactical decisions, $10K-$50K changes), Steering Committee (strategic decisions, >$50K changes, major risks)</li>
-    <li><strong>Stage-Gate Reviews:</strong> Formal approvals required at major milestones (design completion, procurement completion, construction 50%, pre-commissioning, final acceptance)</li>
-</ul>
-
-<h2>Compliance, Risk Management & GRC Elements</h2>
-
-<h3>Banking Regulatory Compliance</h3>
-<p>Ensured full compliance with Central Bank of UAE technology standards for banking data centers including physical security requirements, network segregation, disaster recovery capabilities, audit trail requirements.</p>
-
-<h3>Audit Support</h3>
-<ul>
-    <li>Maintained comprehensive audit trail supporting internal audits (client audit teams) and external audits (Central Bank inspectors, Uptime Institute assessors)</li>
-    <li>Provided project documentation, compliance evidence, test results within <strong>24-48 hours of requests</strong></li>
-    <li>Successfully supported <strong>2 Central Bank audits and 3 internal audits</strong> without findings</li>
-</ul>
-
-<h3>Controls Framework</h3>
-<p>Implemented controls addressing CIA triad (Confidentiality, Integrity, Availability):</p>
-<ul>
-    <li><strong>Confidentiality:</strong> Access controls, biometric authentication</li>
-    <li><strong>Integrity:</strong> Redundancy, monitoring</li>
-    <li><strong>Availability:</strong> N+1/2N+1 redundancy, 99.9%+ uptime design</li>
-</ul>
-
-<h3>Third-Party Risk Management</h3>
-<ul>
-    <li>Assessed vendor compliance with security standards</li>
-    <li>Verified certifications (DEWA licenses for electrical contractors, Uptime Institute ATD for consultants, manufacturer certifications for equipment)</li>
-    <li>Conducted vendor due diligence reviewing financial stability, insurance coverage, past performance</li>
-</ul>
-
-<h3>Risk Register Management</h3>
-<ul>
-    <li>Maintained comprehensive risk register tracking <strong>25-40 risks per project</strong> categorized by probability (High/Medium/Low) and impact (Critical/Major/Minor)</li>
-    <li>Monthly risk reviews updating status, mitigation effectiveness, residual risk levels</li>
-    <li>Implemented preventive controls (multiple vendor quotes, early procurement of long-lead items, parallel critical path activities) and detective controls (weekly progress monitoring, quality inspections, budget tracking)</li>
-</ul>
-
-<h2>Document Management & Authority Approvals</h2>
-<ul>
-    <li>Reviewed <strong>100+ technical drawings</strong> per project using AutoCAD for drawing review and coordination</li>
-    <li>Managed <strong>200+ submittals, 50+ RFIs</strong> through approval cycles</li>
-    <li>Obtained DEWA (Dubai) and ADDC/TRANSCO (Abu Dhabi) dedicated electrical feed approvals</li>
-    <li>Obtained UAE Civil Defense fire system approvals (Dubai and Abu Dhabi)</li>
-    <li>Central Bank compliance certifications</li>
-    <li>Achieved Uptime Institute Tier 4 certification for both banking facilities</li>
-</ul>
-
-<h2>Schedule & Budget Management</h2>
-<ul>
-    <li>Developed master schedules using <strong>MS Project</strong> (500-800 activities) tracking critical path through electrical-HVAC-raised floor-IT sequence</li>
-    <li>Managed budgets <strong>$1.5M-$4M</strong> achieving delivery within 3-5% of approved budget</li>
-    <li>Recovered 3-week schedule slippage through fast-tracking and weekend work authorization</li>
-</ul>
-
-<h2>Technical Scope Delivered</h2>
-
-<h3>Tier 4 Facilities (2N+1 Redundancy)</h3>
-<p><strong>Electrical:</strong></p>
-<ul>
-    <li>Dual utility feeds</li>
-    <li>N+1 generators (Caterpillar 2MW)</li>
-    <li>2N UPS systems (APC, Eaton, Newwave 160 KVA)</li>
-    <li>Dual power distribution, 400A sub-distribution</li>
-</ul>
-
-<p><strong>Cooling:</strong></p>
-<ul>
-    <li>2N precision AC (Trane 80 kW)</li>
-    <li>800mm raised floor</li>
-    <li>Hot/cold aisle containment</li>
-</ul>
-
-<p><strong>IT Infrastructure:</strong></p>
-<ul>
-    <li>Servers: Dell R730, HP DL380 Gen9</li>
-    <li>Storage: EMC VNX5500 60TB, HP 3PAR 80TB</li>
-    <li>Network: Cisco 6509-E, Cisco Nexus 5548UP</li>
-    <li>Security: Cisco ASA 5585-X, F5 BIG-IP</li>
-</ul>
-
-<p><strong>Fire Protection & Environmental Monitoring:</strong></p>
-<ul>
-    <li>Dual VESDA (Very Early Smoking Detection Apparatus) air sampling smoke detection</li>
-    <li>Dual FM200 suppression</li>
-    <li>Environmental sensors: Water leak detection, temperature monitoring, humidity control, gas detection</li>
-    <li>Biometric mantraps</li>
-</ul>
-
-<h3>Tier 3 Facilities (N+1 Redundancy)</h3>
-<ul>
-    <li>N+1 generators (1MW)</li>
-    <li>N+1 UPS (60-80 KVA)</li>
-    <li>N+1 cooling (40-60 kW)</li>
-    <li>600mm raised floor</li>
-</ul>
-
-<h2>Commissioning & Handover</h2>
-
-<h3>Integrated Systems Testing</h3>
-<p><strong>3-week IST phase</strong> coordinating:</p>
-<ul>
-    <li>Electrical: Generator load tests 25/50/75/100%, UPS failover, ATS</li>
-    <li>Cooling: Capacity, temperature mapping</li>
-    <li>Fire suppression</li>
-    <li>IT infrastructure</li>
-    <li>BMS integration</li>
-</ul>
-
-<h3>Punch List Management</h3>
-<ul>
-    <li>Compiled <strong>150-200 items</strong></li>
-    <li>Achieved <strong>98% closure before handover</strong></li>
-</ul>
-
-<h3>Documentation Package</h3>
-<ul>
-    <li>500+ pages O&M manuals</li>
-    <li>As-built drawings</li>
-    <li>Test certificates</li>
-    <li>Warranties</li>
-</ul>
-
-<h3>SLA Establishment</h3>
-<ul>
-    <li>24/7 emergency support (4-hour response)</li>
-    <li>Monthly preventive maintenance</li>
-    <li>Quarterly health reports</li>
-</ul>
-
-<h2>Outcomes & Achievements</h2>
-<ul>
-    <li>Delivered <strong>2 Tier 4 (99.995% uptime) and 5 Tier 3 (99.982% uptime) facilities</strong></li>
-    <li><strong>Performance Metrics:</strong> 88-90% on-time delivery, 100% within 3-5% of budget, CPI 1.02-1.05, SPI 0.98-1.02</li>
-    <li>Achieved Uptime Institute Tier 4 certification placing clients in elite 2-3% of global data centers</li>
-    <li>100% banking regulatory compliance, all passed first-time inspections without deficiencies</li>
-    <li>95%+ client satisfaction scores, multiple references for new business opportunities, repeat business from 3 clients</li>
-    <li><strong>Zero critical safety incidents</strong> across 100,000+ man-hours</li>
-    <li>Successfully supported 2 Central Bank audits and 3 internal audits providing comprehensive project documentation</li>
-</ul>
-
+            <div class="snapshot-item">
+                <div class="snapshot-label">Scale</div>
+                <div class="snapshot-value">3 Data Centres and<br>10+ Relocations</div>
             </div>
-        </div>
-    </div>
+            <div class="snapshot-item">
+                <div class="snapshot-label">Commercials</div>
+                <div class="snapshot-value">Up to US$ 1M</div>
+            </div>
+            <div class="snapshot-item">
+                <div class="snapshot-label">Environment</div>
+                <div class="snapshot-value">Critical Uptime Infrastructure</div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">Project Overview</h2>
+            <p class="section-lead">This work covered new Tier 2 and Tier 3 data centre builds for banking environments, together with more than 10 critical server room and data centre relocations across large enterprise, manufacturing and healthcare clients.</p>
+            <p class="section-lead">The delivery scope combined power, cooling, ICT infrastructure, structured cabling, security, environmental monitoring, connectivity services, approved drawings and operational cutover coordination.</p>
+            <div class="tag-row">
+                <span class="tag">Tier 2 / Tier 3</span>
+                <span class="tag">Banking Data Centres</span>
+                <span class="tag">Server Room Relocations</span>
+                <span class="tag">Power & Cooling</span>
+                <span class="tag">Fibre & Structured Cabling</span>
+                <span class="tag">SD-WAN / Carrier Services</span>
+                <span class="tag">Commissioning & Handover</span>
+            </div>
+        </section>
+
+        <section class="grid-2">
+            <article class="card">
+                <h2 class="section-title">Delivery Environment</h2>
+                <ul>
+                    <li>New data centre builds for banking clients, including two Tier 2 facilities and one Tier 3 facility.</li>
+                    <li>Server room and data centre relocations for manufacturing, healthcare and large enterprise environments.</li>
+                    <li>Delivery under large main contractors and civil contractors, with authority approval cycles coordinated through contractor channels.</li>
+                    <li>Weekend cutovers and short stabilisation windows where critical infrastructure had to be moved, reconnected, validated and handed back to operations.</li>
+                    <li>Banking environments requiring Central Bank, fire and safety approval pathways before operational acceptance.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">Systems Delivered</h2>
+                <ul>
+                    <li>Electrical infrastructure, UPS systems, smart PDUs, switchgear, power distribution and generator coordination.</li>
+                    <li>Precision cooling / CRAC environments, DX air-conditioning, raised floors, hot/cold aisle containment and environmental monitoring.</li>
+                    <li>Rittal racks and cabinets, Panduit and 3M structured cabling, LMZ cabling inside data centre environments and fibre backbone between MDF and IDF rooms.</li>
+                    <li>Cisco switching and routing, Brocade storage switching, Dell / HP server environments and EMC storage infrastructure.</li>
+                    <li>APC and Newave UPS platforms, APC air-conditioning environments and related power / cooling support systems.</li>
+                    <li>Telephony and voice services, dedicated ISP services and SD-WAN supporting secure inter-bank connectivity and Central Bank communication requirements.</li>
+                    <li>Access control, CCTV, FM200 fire suppression, fireproof painting and physical security integration.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="grid-2">
+            <article class="card">
+                <h2 class="section-title">New Data Centre Builds</h2>
+                <p class="section-lead">The new-build work focused on banking data centre environments where Tier 2 and Tier 3 infrastructure had to be delivered with controlled approval cycles, coordinated contractors and staged commissioning.</p>
+                <ul>
+                    <li>Worked with main contractors, MEP teams, civil contractors and specialist subcontractors.</li>
+                    <li>Coordinated delivery across power, cooling, cabling, racks, security, fire systems and ICT infrastructure readiness.</li>
+                    <li>Followed approved drawings and regularly updated drawing revisions through the approval cycle.</li>
+                    <li>Coordinated contractor execution against approved drawings, site conditions and client operational requirements.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">Critical Server Room Relocations</h2>
+                <p class="section-lead">Relocation projects involved controlled dismantling, labelling, transport, reinstallation, rewiring and validation of live enterprise IT infrastructure.</p>
+                <ul>
+                    <li>Relocated racks, servers, switches, routers, storage, UPS systems and DX air-conditioning support equipment.</li>
+                    <li>Labelled cables and equipment before dismantling to support accurate rebuild at the new location.</li>
+                    <li>Backtracked unidentified cabling and services with stakeholders where existing labels were incomplete or missing.</li>
+                    <li>Completed physical relocation during weekend windows, with stabilisation and stakeholder validation over the following days.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card">
+            <h2 class="section-title">My Project Delivery Role</h2>
+            <p class="section-lead">My role covered end-to-end delivery coordination across site activities, contractors, subcontractors, consultants, vendors, technical resources, approval cycles, testing coordination, commissioning readiness and handover. Budget ownership was not part of my scope.</p>
+            <div class="grid-3">
+                <div class="mini-card">
+                    <h3>Site & Contractor Coordination</h3>
+                    <ul>
+                        <li>Site coordination and sequencing</li>
+                        <li>Contractor and subcontractor management</li>
+                        <li>Consultant and authority coordination support</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>Infrastructure Delivery</h3>
+                    <ul>
+                        <li>Power, cooling and rack readiness</li>
+                        <li>Structured cabling and fibre coordination</li>
+                        <li>Connectivity, voice and carrier services coordination</li>
+                    </ul>
+                </div>
+                <div class="mini-card">
+                    <h3>Cutover & Handover</h3>
+                    <ul>
+                        <li>Weekend relocation planning</li>
+                        <li>Testing and commissioning coordination</li>
+                        <li>Defect closure and operational handover</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid-2">
+            <article class="card challenge">
+                <h2 class="section-title">Delivery Challenge</h2>
+                <ul>
+                    <li>Maintaining uptime and reducing downtime risk during relocation and cutover activity.</li>
+                    <li>Working within weekend execution windows where infrastructure had to be moved, reconnected and stabilised quickly.</li>
+                    <li>Managing equipment and cable identification where approximately 20% of existing cabling was not properly labelled.</li>
+                    <li>Coordinating with business stakeholders and technical owners to backtrack services before dismantling equipment.</li>
+                    <li>Managing contractor dependencies across electrical, cooling, cabling, security, fire systems and ICT infrastructure.</li>
+                </ul>
+            </article>
+
+            <article class="card">
+                <h2 class="section-title">My PM Approach</h2>
+                <ul>
+                    <li>Prepared relocation sequencing around business downtime windows and stakeholder availability.</li>
+                    <li>Enforced labelling, documentation and cable identification before dismantling racks and equipment.</li>
+                    <li>Coordinated with stakeholders and third parties for validation of services after reinstallation.</li>
+                    <li>Tracked drawing revisions, approved issue drawings and approval cycles during data centre builds.</li>
+                    <li>Coordinated specialist teams for testing, commissioning, defect closure and final handover.</li>
+                    <li>Managed authority approval dependencies through contractors, including Central Bank, fire and safety approval pathways.</li>
+                </ul>
+            </article>
+        </section>
+
+        <section class="card outcome">
+            <h2 class="section-title">Outcome</h2>
+            <p>The data centre builds and relocation works were completed with operational handover achieved across banking and enterprise environments. Critical cutovers were coordinated through planned execution windows, stakeholder validation and post-move stabilisation. Required approvals, testing coordination, commissioning support and handover activities were completed through the contractor and client delivery process.</p>
+        </section>
+
+        <section class="card takeaway">
+            <h2 class="section-title">My Project Delivery Takeaway</h2>
+            <p>This work demonstrates ICT infrastructure delivery capability in critical uptime environments, combining power, cooling, connectivity, structured cabling, physical security, server room migration and stakeholder-led cutover coordination. It also reflects the ICT foundation that supports my broader AV, electronic security and integrated technology project delivery experience.</p>
+        </section>
+
+        <nav class="footer-nav" aria-label="Project navigation">
+            <a class="btn secondary" href="../../index.html">← Back to Portfolio</a>
+            <a class="btn" href="mailto:kmbasha@gmail.com">Contact Basha</a>
+        </nav>
+    </main>
 </body>
 </html>
